@@ -1,7 +1,7 @@
 //WelcomeScreen.js
 
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, ImageBackground } from 'react-native';
 
 
 
@@ -13,8 +13,18 @@ export default class WelcomeScreen extends React.Component {
         <View style={styles.container}>
          
          <View style={styles.containerLogo}>
-          <Text style={styles.logoText}>Ripple</Text>
-          <Text style={styles.flavorText}>Learning made easy</Text>
+          <ImageBackground source={require('../images/background_deco.png')} style={{width: '100%', height: '100%'}}>
+           <View style={styles.containerLogo}>
+            <Image style={{width: 300, height: 150}}
+                  source={require('../images/app_logo.png')}></Image>
+            <Text style={styles.flavorText}>Learning made easy</Text>
+
+            </View>
+      
+        
+          </ImageBackground>
+
+    
          </View>
   
          <View style={styles.middleContainer} />
@@ -22,7 +32,8 @@ export default class WelcomeScreen extends React.Component {
   
          <View style={styles.bottomContainer}>
            <Button 
-                style={styles.nextButton} 
+                color="#FF6F61"
+          
                 title="Let's go!"
                 onPress={() => this.props.navigation.navigate('SetupTopics')}/>
          </View>
@@ -35,32 +46,30 @@ export default class WelcomeScreen extends React.Component {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: 'powderblue',
+      backgroundColor: '#263056',
       /*alignItems: 'center',
       justifyContent: 'center',
       padding:10, */
     },
     containerLogo: {
-      flex:5,
+ 
+      flex:6,
       alignItems:'center',  
       justifyContent:'center',
     },
-    logoText: {
-      fontSize: 96,
+    flavorText: {
+      color:'white',
+      fontSize:20
     },
     middleContainer: {
       flex:3,
       flexDirection:'column',
-      backgroundColor:'skyblue',
       justifyContent:'flex-end',
-      padding:10
+      padding:10,
       
     },
     bottomContainer: {
-      flex: 2,
-      flexDirection:'row',
-      justifyContent:'space-around',
-      alignItems:'center',
+     padding:15
     },
     
     nextButton: {

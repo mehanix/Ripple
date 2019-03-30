@@ -1,9 +1,9 @@
 {
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 8940,
-  "expoServerNgrokUrl": "https://ai-vb5.anonymous.lalala.exp.direct",
-  "packagerNgrokUrl": "https://packager.ai-vb5.anonymous.lalala.exp.direct",
-  "ngrokPid": 6940,
+  "packagerPid": 2732,
+  "expoServerNgrokUrl": "https://ai-vb5.anonymous.ripple.exp.direct",
+  "packagerNgrokUrl": "https://packager.ai-vb5.anonymous.ripple.exp.direct",
+  "ngrokPid": 9204,
   "devToolsPort": 19002
 }

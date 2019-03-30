@@ -2,7 +2,7 @@ var flatListData =[
 {
     "key":"1",
     "title":"5 cool cat facts",
-    "desc":"cool stuff"
+    "desc":"bla bla bla bla bla hmm nla bl bla bla bla bla bla bla hmm nla bl bla bla bla bla bla bla hmm nla bl bla"
 },
 {
     "key":"2",

@@ -1,11 +1,12 @@
 import React from 'react';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
+import { Font } from 'expo';
 
 
 /***** Screens ****/
 import WelcomeScreen from './screens/WelcomeScreen';
 import SetupTopicsScreen from './screens/SetupTopicsScreen';
-
+import SetupTimeScreen from './screens/SetupTimeScreen';
 
 
 /************ Navigator logic ************/
@@ -21,8 +22,13 @@ const AppNavigator = createStackNavigator(
       screen:SetupTopicsScreen,
       navigationOptions: {
         header: null,
-      }
-
+      },
+    },
+    SetupTime: {
+      screen:SetupTimeScreen,
+      navigationOptions: {
+        header: null,
+      },
     }
   },
 
@@ -35,6 +41,13 @@ const AppNavigator = createStackNavigator(
 const AppContainer = createAppContainer(AppNavigator);
 
 export default class App extends React.Component {
+
+  componentDidMount() {
+    Font.loadAsync({
+      'pacifico': require('./assets/fonts/Pacifico.ttf'),
+    });
+  }
+
   render() {
     return <AppContainer />;
   }
