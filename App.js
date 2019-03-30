@@ -1,16 +1,18 @@
 import React from 'react';
-import {createStackNavigator, createAppContainer} from 'react-navigation';
+import {createStackNavigator, createAppContainer, createSwitchNavigator} from 'react-navigation';
 import { Font } from 'expo';
 
 
 /***** Screens ****/
-import WelcomeScreen from './screens/WelcomeScreen';
-import SetupTopicsScreen from './screens/SetupTopicsScreen';
-import SetupTimeScreen from './screens/SetupTimeScreen';
+import WelcomeScreen from './screens/setup/WelcomeScreen';
+import SetupTopicsScreen from './screens/setup/SetupTopicsScreen';
+import SetupTimeScreen from './screens/setup/SetupTimeScreen';
+import MainScreen from './screens/app/MainScreen';
+
 
 
 /************ Navigator logic ************/
-const AppNavigator = createStackNavigator(
+const SetupStack = createStackNavigator(
   {
     Welcome: { 
       screen:WelcomeScreen,
@@ -31,14 +33,35 @@ const AppNavigator = createStackNavigator(
       },
     }
   },
-
   {
     initialRouteName:"Welcome",
     
   }
 );
 
-const AppContainer = createAppContainer(AppNavigator);
+const AppStack = createStackNavigator(
+  {
+    Main: {
+      screen:MainScreen,
+      navigationOptions: {
+        header: null,
+      },
+    }
+  },
+  {
+    initialRouteName:"Main"
+  }
+)
+
+const AppContainer = createAppContainer(createSwitchNavigator(
+  {
+    Setup:SetupStack,
+    App:AppStack,
+  },
+  {
+    initialRouteName:'Setup',
+  }
+))
 
 export default class App extends React.Component {
 

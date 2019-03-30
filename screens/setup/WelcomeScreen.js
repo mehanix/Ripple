@@ -13,10 +13,10 @@ export default class WelcomeScreen extends React.Component {
         <View style={styles.container}>
          
          <View style={styles.containerLogo}>
-          <ImageBackground source={require('../images/background_deco.png')} style={{width: '100%', height: '100%'}}>
+          <ImageBackground source={require('../../images/background_deco.png')} style={{width: '100%', height: '100%'}}>
            <View style={styles.containerLogo}>
             <Image style={{width: 300, height: 150}}
-                  source={require('../images/app_logo.png')}></Image>
+                  source={require('../../images/app_logo.png')}></Image>
             <Text style={styles.flavorText}>Learning made easy</Text>
 
             </View>

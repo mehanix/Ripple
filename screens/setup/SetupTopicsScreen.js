@@ -1,11 +1,11 @@
 //WelcomeScreen.js
 
 import React from 'react';
-import { StyleSheet, Text, View, Button, FlatList, Image, ImageBackground, Dimensions, ScrollView } from 'react-native';
-import { ListItem, List, Tile  } from 'react-native-elements';
+import { StyleSheet, Text, View, Button, ImageBackground, ScrollView } from 'react-native';
+import {  Tile  } from 'react-native-elements';
 
-import flatListData from '../data/topics';
-import { Font } from 'expo';
+import flatListData from '../../data/topics';
+
 
 
 
@@ -22,9 +22,9 @@ class FlatListItem extends React.Component {
         <Tile 
          
              containerStyle={{padding:10}}
-             height='100%'
+             height={'100%'}
              title={this.props.obj.title}
-             imageSrc={require('../images/cynthia.jpg')}
+             imageSrc={require('../../images/cynthia.jpg')}
              
              imageContainerStyle={{width:'100%'}}
              featured
@@ -56,7 +56,7 @@ export default class SetupTopics extends React.Component {
 
 
             <View style={styles.containerHeader}>
-                <ImageBackground source={require('../images/background_deco.png')} style={{width: '100%', height: '100%'}}>
+                <ImageBackground source={require('../../images/background_deco.png')} style={{width: '100%', height: '100%'}}>
                   <View style={styles.containerHeader}>
                      <Text style={styles.headerText}>Welcome!</Text>
                      <Text style={styles.flavorText}>What do you want to learn about?</Text>
