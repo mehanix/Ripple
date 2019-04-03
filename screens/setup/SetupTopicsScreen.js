@@ -6,14 +6,34 @@ import {  Tile  } from 'react-native-elements';
 
 import flatListData from '../../data/topics';
 
+import firebase from '../../Firebase/firebase';
 
-
+var db = firebase.firestore();
 
 class FlatListItem extends React.Component {
+
+
     constructor(props) {
         super(props);
     
-        console.log(this.props);
+        //console.log(this.props);
+        
+    }
+
+    componentDidMount() {
+        db = firebase.firestore();
+            var docRef = db.collection("prezentare");
+            const output = {};
+
+            docRef.limit(50)
+            .get()
+            .then(querySnapshot => {
+                querySnapshot.docs.map(function (documentSnapshot) {
+                    return (output[documentSnapshot.id] = documentSnapshot.data());
+                });
+          this.setState({dataSource: Object.entries(output)}) ;
+          console.log("datasource:", this.state.dataSource );
+            });
     }
 
     render() {
@@ -46,7 +66,13 @@ class FlatListItem extends React.Component {
 
 export default class SetupTopics extends React.Component {
 
-    
+    componentWillMount() {
+        db.collection("topics").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => { 
+                console.log(`${doc.id} => ${doc.data()}`);
+            });
+        });
+    }
 
 
     render() { 

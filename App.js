@@ -3,6 +3,7 @@ import {createStackNavigator, createAppContainer, createSwitchNavigator} from 'r
 import { Font } from 'expo';
 
 
+
 /***** Screens ****/
 import WelcomeScreen from './screens/setup/WelcomeScreen';
 import SetupTopicsScreen from './screens/setup/SetupTopicsScreen';
@@ -62,10 +63,19 @@ const AppContainer = createAppContainer(createSwitchNavigator(
     initialRouteName:'Setup',
   }
 ))
+/****** End navigator logic ******/
+
 
 export default class App extends React.Component {
 
+
+ 
+   
+
   componentDidMount() {
+
+   
+
     Font.loadAsync({
       'pacifico': require('./assets/fonts/Pacifico.ttf'),
     });
@@ -76,5 +86,5 @@ export default class App extends React.Component {
   }
 }
 
-/****** End navigator logic ******/
+
 

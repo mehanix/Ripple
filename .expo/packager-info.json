@@ -1,9 +1,9 @@
 {
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 3292,
-  "expoServerNgrokUrl": "https://y6-tae.anonymous.ripple.exp.direct",
-  "packagerNgrokUrl": "https://packager.y6-tae.anonymous.ripple.exp.direct",
-  "ngrokPid": 9660,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "devToolsPort": 19002
 }
