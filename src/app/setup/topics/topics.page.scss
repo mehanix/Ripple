@@ -1,0 +1,42 @@
+ion-content {
+    --background: #263056 url('../../../assets/img/background-deco.png') no-repeat center top / contain;
+    --overflow: hidden;
+}
+
+.logo {
+
+    padding-top:10%;
+    padding-left:10%;
+    padding-right:10%;
+    color:white;
+}
+
+.card-row {
+    height:60%;
+}
+
+.button-row {
+    height:10%;
+    padding-bottom:2%;
+}
+
+ion-card {
+
+    height:100%;
+}
+
+.colorr {
+    color:red;
+}
+
+h1 {
+    font-family: 'Pacifico';
+    font-size: 3.65em!important;
+
+}
+@font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../../assets/fonts/Pacifico-Regular.ttf') format('ttf');
+  }
