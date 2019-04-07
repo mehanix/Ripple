@@ -1,0 +1,6 @@
+{
+  "appId": "com.mehanix.ripple",
+  "appName": "ripple",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}

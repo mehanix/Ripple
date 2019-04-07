@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'welcome', loadChildren: './setup/welcome/welcome.module#WelcomePageModule' },
   { path: 'topics', loadChildren: './setup/topics/topics.module#TopicsPageModule' },
+  { path: 'timeset', loadChildren: './setup/timeset/timeset.module#TimesetPageModule' },
 ];
 
 @NgModule({
