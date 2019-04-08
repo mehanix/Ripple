@@ -1,0 +1,19 @@
+<ion-slides pager="true" [options]="{effect: 'flip' }" style="height:55vh">
+     
+  <ion-slide *ngFor="let item of topics | async">
+    <ion-card color="light">
+      <img src="../../../assets/img/placeholder.jpg" style="width:100%; object-fit: cover;">
+
+        <ion-card-title>{{item.nume}}</ion-card-title>
+
+    
+      <ion-card-content>
+       {{item.desc}}
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>  
+
+    
+
+  
+    </ion-slides>
