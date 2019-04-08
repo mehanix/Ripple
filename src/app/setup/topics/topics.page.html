@@ -1,34 +1,14 @@
 <ion-content>
-
-
-
         <ion-row class="logo justify-content-center align-items-center" align="center" style="height:30%">
           <ion-col>
             <h1>Welcome!</h1>
             <p>What do you want to learn about?</p>
-       
-
           </ion-col>
         </ion-row>
         
         <ion-row class="card-row justify-content-center align-items-center" align="center">
           <ion-col>
-          <ion-slides pager="true" [options]="{effect: 'flip' }" style="height:55vh">
-     
-            <ion-slide>
-                <app-topic-card></app-topic-card>
-            </ion-slide>    
-            <ion-slide>
-                <app-topic-card></app-topic-card>
-            </ion-slide>    
-            <ion-slide>
-                <app-topic-card></app-topic-card>
-            </ion-slide>    
-       
-                
-      
-            
-              </ion-slides>
+            <app-topic-cards></app-topic-cards>
             </ion-col>
         </ion-row>
         
