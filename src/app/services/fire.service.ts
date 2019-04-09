@@ -8,7 +8,19 @@ export interface Item {
   nume: string;
   imagine: string;
   desc: string;
-  id: string;
+  id?: string;
+}
+
+
+class ItemData {
+
+  item:Item;
+  selected:boolean;
+  constructor(item:Item, selected:boolean) {
+    this.item = item;
+    this.selected = selected;
+    
+  }
 }
 
 
@@ -20,6 +32,8 @@ export class FireService {
   
   private topicsPrezentareCollection:AngularFirestoreCollection<Item>;
   private topicsPrezentare:Observable<Item[]>;
+  private topicsprezentareData:Item[];
+  private selectedItems:ItemData[];
 
   constructor(private firestore: AngularFirestore) { 
 
@@ -33,10 +47,24 @@ export class FireService {
       }))
     );
 
+
+
+    
+     // this.topicsPrezentare.subscribe(changes => {
+     //   return changes;
+
+     //   });
+
+
   }
 
   public getTopicsPrezentare() {
     return this.topicsPrezentare;
+  }
+
+  public selectPrezentareWithName(name:string)
+  {
+
   }
   
 }
