@@ -28,7 +28,7 @@ export class AppComponent {
       }
       else
       {
-        this.router.navigateByUrl("/timeset");
+        this.router.navigateByUrl("/topics");
       }
 
       this.statusBar.styleDefault();
