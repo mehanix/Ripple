@@ -1,5 +1,7 @@
 {
   "name": "ripple-ionic",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

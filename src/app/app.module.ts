@@ -13,7 +13,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { firebaseConfig } from '../credentials';
+import { IonicStorageModule } from '@ionic/storage';
 
+import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 
 
 @NgModule({
@@ -21,12 +23,19 @@ import { firebaseConfig } from '../credentials';
   entryComponents: [],
   imports: [BrowserModule,
             IonicModule.forRoot(),
+            IonicStorageModule.forRoot({
+              name: '__mydb',
+              driverOrder: ['indexeddb', 'sqlite', 'websql']
+            }),
             AngularFireModule.initializeApp(firebaseConfig),
-            AngularFirestoreModule,AppRoutingModule],
+            AngularFirestoreModule,
+            AppRoutingModule,
+            ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    LocalNotifications
   ],
   bootstrap: [AppComponent]
  

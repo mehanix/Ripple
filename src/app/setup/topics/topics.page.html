@@ -9,14 +9,15 @@
         
         <ion-row class="card-row justify-content-center align-items-center" align="center">
           <ion-col>
-            <app-topic-cards></app-topic-cards>
+            <app-topic-cards id="topicCardsId"></app-topic-cards>
             </ion-col>
         </ion-row>
+        
         
         <ion-row class="button-row ion-align-items-end" style="padding-top:5px">
           <ion-col>
         
-              <ion-button expand="full" color="secondary" routerLink="/timeset">Next</ion-button>
+              <ion-button expand="full" (click)="saveTopics()" color="secondary" routerLink="/timeset">Next</ion-button>
         
           </ion-col>
         </ion-row>
