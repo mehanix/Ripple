@@ -12,7 +12,7 @@
     <ion-col>
       <ion-item style="padding:5px">
         <ion-label>Choose the time:</ion-label>
-        <ion-datetime color="secondary" placeholder="Tap here" displayFormat="HH:mm"></ion-datetime>
+        <ion-datetime color="secondary" placeholder="Tap here" [(ngModel)]="selectedTime" (ionChange)="setTime()" displayFormat="HH:mm" ></ion-datetime>
       </ion-item>
 
       </ion-col>

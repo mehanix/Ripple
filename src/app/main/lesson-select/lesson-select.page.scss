@@ -1,0 +1,52 @@
+ion-content {
+    --background: #ffffff url('../../../assets/img/background-deco.png') no-repeat center top / contain;
+    --overflow: hidden;
+    h1 {
+        font-family:'Pacifico';
+        font-size: 34pt!important;
+        color:black;
+    }
+    p {
+        color:black;
+    }
+}
+
+.logo {
+
+    padding-top:10%;
+    padding-left:10%;
+    padding-right:10%;
+    color:white;
+}
+
+ion-card {
+    height:100%!important;
+    width:100%!important;
+
+}
+.lessons-container {
+    height: 55vh;
+}
+
+img {
+    height:40%!important;
+}
+
+.text-container {
+    height:44%!important;
+}
+
+h1 {
+    font-family: 'Pacifico';
+    font-size: 3.65em!important;
+
+}
+@font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../../assets/fonts/Pacifico-Regular.ttf') format('ttf');
+  }
+
+
+  
