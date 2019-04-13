@@ -9,15 +9,15 @@
   
   <ion-row class="lessons-container justify-content-center align-items-center"  align="center">
       
-    <ion-card  style="width:100%; margin-top:0;"  color="light" no-padding>
+    <ion-card style="width:100%; margin-top:0;"  color="light" no-padding>
           <img src="../../../assets/img/placeholder.jpg" style=" height:50%; width:100%; object-fit: cover;">
     
           <div class="text-container">
-            <ion-card-subtitle>Nume topic</ion-card-subtitle>
-            <ion-card-title>Nume lectie</ion-card-title>
+            <ion-card-subtitle>{{(topicName)}}</ion-card-subtitle>
+            <ion-card-title >{{(todaysLesson)?.titlu}}</ion-card-title>
     
           <ion-card-content>
-           Scurta descriere lectie 
+            {{(todaysLesson)?.desc}}
           </ion-card-content>
         </div>
          
@@ -27,7 +27,7 @@
   <ion-row style="height:13vh!important;"class="justify-content-center align-items-center"  align="center">
 
       <ion-col class="ion-align-self-center">
-          <ion-button>Begin</ion-button>
+          <ion-button (click)="startLesson()">Begin</ion-button>
 
         </ion-col>
 
