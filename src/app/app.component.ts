@@ -28,7 +28,7 @@ export class AppComponent {
       }
       else
       {
-        this.router.navigateByUrl("/lesson-select");
+        this.router.navigateByUrl("/lesson-view");
       }
 
       this.statusBar.styleDefault();

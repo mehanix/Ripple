@@ -1,0 +1,40 @@
+.title-section {
+
+    h4 {
+        padding-bottom:0;
+        margin-bottom:2;
+        margin-top:6%;
+        font-variant: small-caps;
+        color:var(--ion-color-secondary);
+    }
+    h1 {
+        margin-top:0;
+    }
+}
+
+strong {
+    color:var(--ion-color-secondary);
+    
+}
+
+.social {
+    ion-toolbar {
+        --padding-top:15px;
+        --padding-bottom:15px;
+        --padding-start:10px;
+    }
+}
+
+#toolbar-share {
+
+    --color:var(--ion-color-secondary-contrast);
+    --background:var(--ion-color-secondary);
+}
+
+#toolbar-bookmark {
+
+    --color:var(--ion-color-secondary-contrast);
+    --background:var(--ion-color-secondary-shade);
+}
+
+ 
