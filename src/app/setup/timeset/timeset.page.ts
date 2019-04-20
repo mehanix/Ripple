@@ -40,6 +40,10 @@ export class TimesetPage implements OnInit {
    
   }
 
+  finishSetup() {
+    this.storage.set('setupComplete', true);
+
+  }
 
   }
 

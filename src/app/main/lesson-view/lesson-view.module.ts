@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { LessonViewPage } from './lesson-view.page';
 
+import { ComponentsModule } from 'src/app/components/components.module';
+
 const routes: Routes = [
   {
     path: '',
@@ -18,6 +20,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
+    ComponentsModule,
     IonicModule,
     RouterModule.forChild(routes)
   ],
