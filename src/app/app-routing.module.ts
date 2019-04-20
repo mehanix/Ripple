@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'welcome', loadChildren: './setup/welcome/welcome.module#WelcomePageModule' },
   { path: 'topics', loadChildren: './setup/topics/topics.module#TopicsPageModule' },
   { path: 'timeset', loadChildren: './setup/timeset/timeset.module#TimesetPageModule' },
-  { path: 'lesson-select', loadChildren: './main/lesson-select/lesson-select.module#LessonSelectPageModule' },  { path: 'lesson-view', loadChildren: './main/lesson-view/lesson-view.module#LessonViewPageModule' },
+  { path: 'lesson-select', loadChildren: './main/lesson-select/lesson-select.module#LessonSelectPageModule' },
+  { path: 'lesson-view/:id', loadChildren: './main/lesson-view/lesson-view.module#LessonViewPageModule' },
 
 
 ];

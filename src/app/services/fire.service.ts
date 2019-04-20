@@ -3,25 +3,10 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFirestoreCollection, AngularFirestoreDocument, DocumentChangeAction } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { mergeMap, take } from 'rxjs/operators';
+import { Lesson, ItemPrezentare, Topic } from './data.service';
 
 
-export interface ItemPrezentare { 
-  nume: string;
-  imagine: string;
-  desc: string;
-  id?: string;
-}
 
-export interface Topic {
-  nume:string;
-  id:string;
-}
-
-export interface Lesson {
-  imagini: string[];
-  data: string[];
-  titlu: string[];
-}
 
 
 
@@ -37,7 +22,7 @@ export class FireService {
   private lessonsCollection: AngularFirestoreCollection<Lesson>;
   private lessons:Observable<Lesson[]>;
 
-  private todaysLesson:Lesson;
+  public todaysLesson:Lesson;
 
   id:string;
 
@@ -88,7 +73,7 @@ export class FireService {
         var lessonNumber:number = this.getRandomInt(length);
         this.todaysLesson = val[lessonNumber];
        // console.table(this.todaysLesson);
-       resolve([this.todaysLesson,topicName])
+       resolve([this.todaysLesson,topicName,this.id])
 
       });
       }))

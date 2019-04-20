@@ -1,5 +1,5 @@
 ion-content {
-    --background: #ffffff url('../../../assets/img/background-deco.png') no-repeat center top / contain;
+    --background: #ffffff url('../../../assets/img/background-deco-main.png') no-repeat center top / contain;
     --overflow: hidden;
     
 
@@ -36,6 +36,7 @@ img {
 
 .text-container {
     height:44%!important;
+    padding-top:15px;
 }
 
 h1 {

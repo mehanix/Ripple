@@ -4,6 +4,7 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-root',
@@ -14,26 +15,31 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private router: Router
+    private router: Router,
+    private storage: Storage
+ 
   ) {
-    this.initializeApp();
-  }
-
-  initializeApp() {
-
     this.platform.ready().then(() => {
 
-      if(false) {
-        this.router.navigateByUrl("/");
-      }
-      else
-      {
-        this.router.navigateByUrl("/lesson-view");
-      }
+      storage.get('setupComplete').then((val) => {
+        if(val==true) {
+          this.router.navigateByUrl("/lesson-select");
+        }
+        else
+        {
+          this.router.navigateByUrl("/welcome");
+        }
+  
+        this.statusBar.styleDefault();
+        this.splashScreen.hide();
+  
+      });
+      });
 
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
 
-    });
+     
+   
   }
+
+ 
 }

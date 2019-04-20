@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { FireService } from 'src/app/services/fire.service';
+import { DataService, Lesson } from 'src/app/services/data.service';
 
 
-export interface Lesson {
-  imagini: string[];
-  data: string[];
-  titlu: string[];
-}
+
 
 @Component({
   selector: 'app-lesson-select',
@@ -19,7 +16,7 @@ export class LessonSelectPage implements OnInit {
   private selectedTopic:string;
   private todaysLesson:Lesson;
   topicName: string;
-  constructor(private storage:Storage, private fireService:FireService) { 
+  constructor(private storage:Storage, private fireService:FireService, private dataService:DataService) { 
 
     this.storage.get('topics').then((val:Array<string>) => {
       //console.log(val);
@@ -32,7 +29,14 @@ export class LessonSelectPage implements OnInit {
      
 
      var promise =  fireService.selectTopicLesson(this.selectedTopic);
-     promise.then((([array, name])  => { this.todaysLesson = array; this.topicName = name; console.log(val);}));
+     promise.then((([array, name, topicId])  => {
+       this.todaysLesson = array; 
+       this.topicName = name;
+       dataService.setLessonContent(this.todaysLesson);
+       dataService.setTopicId(topicId);
+       console.log(topicId);
+       console.log(val);
+      }));
     });
   }
 
@@ -44,6 +48,14 @@ export class LessonSelectPage implements OnInit {
 
 startLesson(){
 
+}
+
+public getLessonData() {
+  return this.todaysLesson;
+}
+
+public getTopicName() {
+  return this.topicName;
 }
 
 
