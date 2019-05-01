@@ -23,7 +23,7 @@ export class AppComponent {
 
       storage.get('setupComplete').then((val) => {
         if(val==true) {
-          this.router.navigateByUrl("/lesson-select");
+          this.router.navigateByUrl("/main-tabs");
         }
         else
         {

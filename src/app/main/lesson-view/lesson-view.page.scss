@@ -25,16 +25,23 @@ strong {
     }
 }
 
+#toolbar-complete {
+
+    --color:var(--ion-color-secondary-contrast);
+    --background:var(--ion-color-secondary-tint);
+}
+
 #toolbar-share {
 
     --color:var(--ion-color-secondary-contrast);
-    --background:var(--ion-color-secondary-shade);
+    --background:var(--ion-color-secondary);
 }
 
 #toolbar-bookmark {
 
     --color:var(--ion-color-secondary-contrast);
-    --background:var(--ion-color-secondary);
+    --background:var(--ion-color-secondary-shade);
 }
+
 
  

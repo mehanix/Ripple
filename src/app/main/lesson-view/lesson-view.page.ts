@@ -23,4 +23,7 @@ export class LessonViewPage implements OnInit {
 
   }
 
+  clack() {
+    console.log("clack clack")
+  }
 }

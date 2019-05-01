@@ -21,23 +21,12 @@ ion-content {
     color:white;
 }
 
-ion-card {
-    height:100%!important;
-    width:100%!important;
 
-}
-.lessons-container {
-    height: 53vh;
-}
 
 img {
     height:40%!important;
 }
 
-.text-container {
-    height:44%!important;
-    padding-top:15px;
-}
 
 h1 {
     font-family: 'Pacifico';
@@ -51,5 +40,13 @@ h1 {
     src: url('../../../assets/fonts/Pacifico-Regular.ttf') format('ttf');
   }
 
+  .flavor-text {
+    text-align: center;
+    font-size: 15pt;
+}
 
-  
+  .avatar {
+      width:40%;
+      margin-left: auto;
+      margin-right: auto;
+  }
