@@ -1,9 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>topic-select</ion-title>
+    <ion-title>Topics</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<ion-grid no-padding>
+        <ion-row no-padding>
+          <ion-col size="6" no-padding *ngFor="let item of topics | async">
+          <ion-card (click)="showModal(item)" no-padding>
+              <img src="../../../assets/img/placeholder.jpg" style="width:100%; object-fit: cover; padding-bottom:2vh">
+              <ion-card-subtitle>{{item.nume}}</ion-card-subtitle>
+          </ion-card>
+          </ion-col>
+       
+          
+          </ion-row>
+      
+      
+
+      </ion-grid>
 
 </ion-content>

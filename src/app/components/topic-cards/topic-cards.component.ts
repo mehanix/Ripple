@@ -6,6 +6,8 @@ import { FireService } from "../../services/fire.service";
   templateUrl: './topic-cards.component.html',
   styleUrls: ['./topic-cards.component.scss'],
 })  
+/**** SETUP *****/
+/******TopicCards: Componenta care incarca, afiseaza toate topicurile din db pt a fi alese de user*******/
 export class TopicCardsComponent implements OnInit {
 
   private topics;
