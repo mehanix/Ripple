@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { TopicSelectPage } from './topic-select.page';
+import { ComponentsModule } from 'src/app/components/components.module';
+import { TopicModalModule } from 'src/app/components/topic-modal/topic-modal.module';
 
 const routes: Routes = [
   {
@@ -19,8 +21,10 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ComponentsModule,
+    TopicModalModule
   ],
-  declarations: [TopicSelectPage]
+  declarations: [TopicSelectPage],
 })
 export class TopicSelectPageModule {}

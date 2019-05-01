@@ -17,6 +17,9 @@ interface segment {
   templateUrl: './lesson-section.component.html',
   styleUrls: ['./lesson-section.component.scss'],
 })
+
+/*******LESSON-VIEW*******/
+/******* lesson-section: da handle la informatiile lectiei luate din db - prelucrare, render *******/
 export class LessonSectionComponent implements OnInit {
 
   private lesson:Lesson;

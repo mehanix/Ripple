@@ -15,9 +15,10 @@ import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 
 import { AngularFireStorageModule } from '@angular/fire/storage';
 
+
 @NgModule({
   declarations: [AppComponent],
-  entryComponents: [],
+  entryComponents: [ ],
   imports: [BrowserModule,
             IonicModule.forRoot(),
             IonicStorageModule.forRoot({
