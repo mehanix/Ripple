@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { FireService } from 'src/app/services/fire.service';
 import { DataService, Lesson } from 'src/app/services/data.service';
-
+import { MenuController } from '@ionic/angular';
 
 
 
@@ -16,7 +16,7 @@ export class LessonSelectPage implements OnInit {
   private selectedTopic:string;
   private todaysLesson:Lesson;
   topicName: string;
-  constructor(private storage:Storage, private fireService:FireService, private dataService:DataService) { 
+  constructor(private menu:MenuController, private storage:Storage, private fireService:FireService, private dataService:DataService) { 
 
     this.storage.get('topics').then((val:Array<string>) => {
       //console.log(val);
@@ -61,6 +61,13 @@ public getTopicName() {
 
 getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
+}
+
+openMenu() {
+
+  console.log("clack");
+  this.menu.enable(true, 'first');
+  this.menu.open('first');
 }
 
 }

@@ -5,13 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LessonSelectPage } from './lesson-select.page';
-import { ComponentsModule } from 'src/app/components/components.module';
+import { TopicSelectPage } from './topic-select.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: LessonSelectPage
+    component: TopicSelectPage
   }
 ];
 
@@ -19,10 +18,9 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
-    ComponentsModule,
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [LessonSelectPage]
+  declarations: [TopicSelectPage]
 })
-export class LessonSelectPageModule {}
+export class TopicSelectPageModule {}

@@ -28,15 +28,15 @@
   </div>
 
   <div class="social">
-      <ion-toolbar id="toolbar-complete">
+      <ion-toolbar (click)="clack()" id="toolbar-complete">
           <ion-buttons slot="secondary">
               <ion-button>
-                <ion-icon slot="icon-only" name="bookmark" style="color:white"></ion-icon>
+                <ion-icon slot="icon-only" name="heart" style="color:white"></ion-icon>
               </ion-button>
             </ion-buttons>
-        Bookmark this lesson</ion-toolbar>
+        Complete lesson!</ion-toolbar>
 
-    <ion-toolbar id="toolbar-share" >
+    <ion-toolbar  (click)="clack()" id="toolbar-share" >
         <ion-buttons slot="secondary">
             <ion-button>
               <ion-icon slot="icon-only" name="share" style="color:white"></ion-icon>
@@ -44,7 +44,7 @@
           </ion-buttons>
       Share with yo friends
     </ion-toolbar>
-    <ion-toolbar id="toolbar-bookmark">
+    <ion-toolbar  (click)="clack()" id="toolbar-bookmark">
         <ion-buttons slot="secondary">
             <ion-button>
               <ion-icon slot="icon-only" name="bookmark" style="color:white"></ion-icon>
