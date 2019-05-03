@@ -19,6 +19,8 @@ export class LessonSelectPage implements OnInit {
   constructor(private menu:MenuController, private storage:Storage, private fireService:FireService, private dataService:DataService) { 
 
     this.storage.get('topics').then((val:Array<string>) => {
+
+      
       //console.log(val);
       
       var topicNr = this.getRandomInt(val.length);
