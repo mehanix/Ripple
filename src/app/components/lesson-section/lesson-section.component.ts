@@ -52,12 +52,14 @@ export class LessonSectionComponent implements OnInit {
       const ref = this.storage.ref("topics/" + this.topicId + "/" + this.lesson.id + "/"+ this.lesson.imagini[i]);
       this.imgUrl = ref.getDownloadURL();
       this.imgUrl.subscribe((v) => {
-        console.log(v)
+      
         var s: segment = {
           paragraf:this.lesson.paragrafe[i],
           img:v
         };
-        this.segments.push(s);
+        console.table(s)
+        this.segments[i]=s;
+
       });
 
 
