@@ -2,7 +2,7 @@
      
   <ion-slide *ngFor="let item of topics | async">
     <ion-card  color="light" no-padding>
-      <img src="../../../assets/img/placeholder.jpg" style="width:100%; object-fit: cover;">
+      <img src="{{item.imagine}}" style="width:100%; object-fit: cover;">
 
       <div class="text-container">
         <ion-card-subtitle></ion-card-subtitle>

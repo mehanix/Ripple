@@ -4,6 +4,7 @@ import { AngularFirestoreCollection, AngularFirestoreDocument, DocumentChangeAct
 import { Observable } from 'rxjs';
 import { mergeMap, take } from 'rxjs/operators';
 import { Lesson, ItemPrezentare, Topic } from './data.service';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 
 
@@ -26,7 +27,7 @@ export class FireService {
 
   id:string;
 
-  constructor(private firestore: AngularFirestore) { 
+  constructor(private firestore: AngularFirestore,  private fireStorage: AngularFireStorage) { 
 
     /** array cu informatiile de prezentare ale topic-urilor **/
   //  this.topicsPrezentare = this.topicsPrezentareCollection.snapshotChanges().pipe(
@@ -60,6 +61,8 @@ export class FireService {
       var topics:AngularFirestoreCollection<Topic>= this.firestore.collection('topics', ref => ref.where('nume', '==', topicName))
    var topicsValue = topics.valueChanges();
 
+   
+
    topicsValue.subscribe( ref => ref.map((p) => { 
 
       this.id = p.id;
@@ -72,7 +75,7 @@ export class FireService {
         length = val.length;
         var lessonNumber:number = this.getRandomInt(length);
         this.todaysLesson = val[lessonNumber];
-       // console.table(this.todaysLesson);
+        console.table(val[lessonNumber]);
        resolve([this.todaysLesson,topicName,this.id])
 
       });

@@ -21,6 +21,7 @@ export interface Lesson {
   desc: string;
   subtitlu: string;
   id:string;
+  headerImage:string;
 }
 
 export interface LessonHeader {
