@@ -9,7 +9,7 @@
         <ion-row no-padding>
           <ion-col size="6" no-padding *ngFor="let item of topics | async">
           <ion-card (click)="showModal(item)" no-padding>
-              <img src="../../../assets/img/placeholder.jpg" style="width:100%; object-fit: cover; padding-bottom:2vh">
+              <img src="{{item.imagine}}" style="width:100%; object-fit: cover; height:13vh!important;">
               <ion-card-subtitle>{{item.nume}}</ion-card-subtitle>
           </ion-card>
           </ion-col>

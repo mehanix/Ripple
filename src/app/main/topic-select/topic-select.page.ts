@@ -13,20 +13,27 @@ import { TopicModalComponent } from 'src/app/components/topic-modal/topic-modal.
 export class TopicSelectPage implements OnInit {
 
   private topics;
-  public selectedTopics;
+  public selectedTopics:string[];
 
   constructor(private storage:Storage, private fireService:FireService, private modalCtrl:ModalController) { 
 
-    this.topics = fireService.getTopicsPrezentare();
-    this.selectedTopics = [];
+    
+
   }
 
   ngOnInit() {
+
+    this.topics = this.fireService.getTopicsPrezentare();
+    this.storage.get('topics').then((p) => {     
+      this.selectedTopics = p;
+    }).then(() => {console.log(this.selectedTopics)})
+  
   
   }
 
   saveTopics() {
 
+    console.log("topicz saved")
 
   }
 
@@ -34,7 +41,9 @@ export class TopicSelectPage implements OnInit {
     const modal = await this.modalCtrl.create({
       component:TopicModalComponent,
       componentProps: {
-        data: item
+        data: item,
+        topicsList:this.selectedTopics,
+        change:this.saveTopics.bind(this)
       },
     })
     await modal.present();
