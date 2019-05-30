@@ -26,11 +26,12 @@ export class LessonSectionComponent implements OnInit {
   private segments = [];
   private topicId:string;
   imgUrl: Observable<string | null>;
+  private dataLoaded:boolean
 
   constructor( private dataService:DataService, private storage: AngularFireStorage) { 
 
     this.topicId =  dataService.getTopicId();
-
+    this.dataLoaded=false;
 
   }
 
@@ -41,31 +42,31 @@ export class LessonSectionComponent implements OnInit {
   
 
     const ref = this.storage.ref("topics/" + this.topicId + "/" + this.lesson.id + "/1.jpg");
-    this.prepareLessonSegments();
+    this.prepareLessonSegments()
     console.log(this.segments);
 
   }
 
   //this is a mess.
   prepareLessonSegments() {
-    for (let i in this.lesson.paragrafe) {
-      console.log(i); //de ce imi face typescript asta. vreau si eu un for ca tot omul
-      const ref = this.storage.ref("topics/" + this.topicId + "/" + this.lesson.id + "/"+ this.lesson.imagini[i]);
-      this.imgUrl = ref.getDownloadURL();
-      this.imgUrl.subscribe((v) => {
-      
-        var s: segment = {
-          paragraf:this.lesson.paragrafe[i],
-          img:v
-        };
-        console.table(s)
-        this.segments[i]=s;
 
-      });
-
-
- 
-    }
+      for (let i in this.lesson.paragrafe) {
+        console.log(i); //de ce imi face typescript asta. vreau si eu un for ca tot omul
+        const ref = this.storage.ref("topics/" + this.topicId + "/" + this.lesson.id + "/"+ this.lesson.imagini[i]);
+        this.imgUrl = ref.getDownloadURL();
+        this.imgUrl.subscribe((v) => {
+        
+          var s: segment = {
+            paragraf:this.lesson.paragrafe[i],
+            img:v
+          };
+          console.table(s)
+          this.segments[i]=s;
+  
+        });
+      }
+      this.dataLoaded = true;
+  
 
   }
 }

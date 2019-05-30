@@ -1,6 +1,7 @@
 {
-  "appId": "com.mehanix.ripple",
-  "appName": "ripple",
+  "appId": "io.ionic.starter",
+  "appName": "ripple-ionic",
   "bundledWebRuntime": false,
-  "webDir": "www"
+  "webDir": "www",
+  "npmClient": "npm"
 }
