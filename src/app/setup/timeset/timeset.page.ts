@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage';
-import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 
 
 
@@ -15,7 +14,7 @@ export class TimesetPage implements OnInit {
 
 
 
-  constructor(private storage: Storage, private localNotifications: LocalNotifications) { }
+  constructor(private storage: Storage) { }
 
   ngOnInit() {
   }
@@ -31,13 +30,13 @@ export class TimesetPage implements OnInit {
     this.storage.set('hour', hr);
     this.storage.set('min', min);
 
-    this.localNotifications.schedule({
+    /*this.localNotifications.schedule({
       id: 42,
       title: 'Here\'s your lesson for the day!',
       text: 'Ready to learn?',
       trigger: { every: { hour: hr, minute: min } }
     });
-   
+   */
   }
 
   finishSetup() {
