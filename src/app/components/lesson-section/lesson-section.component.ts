@@ -37,7 +37,8 @@ export class LessonSectionComponent implements OnInit {
   ngOnInit() {
     
     this.lesson = this.dataService.getLessonContent();
-    console.log(this.lesson);
+    
+  
 
     const ref = this.storage.ref("topics/" + this.topicId + "/" + this.lesson.id + "/1.jpg");
     this.prepareLessonSegments();
