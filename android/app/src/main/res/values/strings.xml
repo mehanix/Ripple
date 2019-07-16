@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">ripple</string>
-    <string name="title_activity_main">ripple</string>
-    <string name="package_name">com.mehanix.ripple</string>
-    <string name="fileprovider_authority">com.mehanix.ripple.fileprovider</string>
-    <string name="custom_url_scheme">com.mehanix.ripple</string>
-</resources>

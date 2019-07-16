@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from 'angularfire2/firestore';
-import { AngularFirestoreCollection, AngularFirestoreDocument, DocumentChangeAction } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { mergeMap, take } from 'rxjs/operators';
 import { Lesson, ItemPrezentare, Topic } from './data.service';
-import { AngularFireStorage } from '@angular/fire/storage';
 
 
 
@@ -16,20 +13,20 @@ import { AngularFireStorage } from '@angular/fire/storage';
 })
 export class FireService {
 
-  
-  private topicsPrezentareCollection:AngularFirestoreCollection<ItemPrezentare>;
-  private topicsPrezentare:Observable<ItemPrezentare[]>;
-  
+/*
+  private topicsPrezentareCollection: AngularFirestoreCollection<ItemPrezentare>;
+  private topicsPrezentare: Observable<ItemPrezentare[]>;
+
   private lessonsCollection: AngularFirestoreCollection<Lesson>;
-  private lessons:Observable<Lesson[]>;
+  private lessons: Observable<Lesson[]>;
 
-  public todaysLesson:Lesson;
+  public todaysLesson: Lesson;
 
-  id:string;
-
-  constructor(private firestore: AngularFirestore,  private fireStorage: AngularFireStorage) { 
-
-    /** array cu informatiile de prezentare ale topic-urilor **/
+  id: string;
+*/
+  constructor() {
+/*
+    /** array cu informatiile de prezentare ale topic-urilor
   //  this.topicsPrezentare = this.topicsPrezentareCollection.snapshotChanges().pipe(
    //   map(actions => actions.map(a => {
    //     const data = a.payload.doc.data() as ItemPrezentare;
@@ -49,21 +46,21 @@ export class FireService {
     return this.topicsPrezentare;
   }
 
-  /**** Returneaza colectia cu toate lectiile ****/
+  /**** Returneaza colectia cu toate lectiile
  // public getTopicsLessons() {
  //   return this.topicsLessons;
  // }
 
-  /** Functie care alege random o lectie a topicului dat **/
+  /** Functie care alege random o lectie a topicului dat
    public selectTopicLesson(topicName:string)
   {
     return new Promise((resolve) => {
       var topics:AngularFirestoreCollection<Topic>= this.firestore.collection('topics', ref => ref.where('nume', '==', topicName))
    var topicsValue = topics.valueChanges();
 
-   
 
-   topicsValue.subscribe( ref => ref.map((p) => { 
+
+   topicsValue.subscribe( ref => ref.map((p) => {
 
       this.id = p.id;
       this.afiseaza(this.id);
@@ -80,36 +77,36 @@ export class FireService {
 
       });
       }))
-      
-      
-      
+
+
+
     });
 
 
 
-   
 
-      
 
+
+*/
   }
 
   getTodaysLesson() {
-    return this.todaysLesson;
+   // return this.todaysLesson;
   }
-  
+
 
   afiseaza(value) {
-    console.log(value);
+   // console.log(value);
   }
 
-  getLessonCollection(id:string) {
-    var lessonsDoc:AngularFirestoreDocument<Topic> = this.firestore.doc('topics/'+id);
-    var lessonCollection:AngularFirestoreCollection<Lesson> = lessonsDoc.collection<Lesson>('lectii');
-    this.lessons = lessonCollection.valueChanges();
+  getLessonCollection(id: string) {
+  //  let lessonsDoc: AngularFirestoreDocument<Topic> = this.firestore.doc('topics/' + id);
+  //  let lessonCollection: AngularFirestoreCollection<Lesson> = lessonsDoc.collection<Lesson>('lectii');
+  //  this.lessons = lessonCollection.valueChanges();
   }
 
-  getRandomInt(max:number):number {
-    return Math.floor(Math.random() * Math.floor(max));
-  }
+  //getRandomInt(max: number): number {
+  //  return Math.floor(Math.random() * Math.floor(max));
+ // }
 
 }

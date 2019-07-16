@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage';
-import { FireService } from 'src/app/services/fire.service';
-import { DataService, Lesson } from 'src/app/services/data.service';
+//import { DataService, Lesson } from 'src/app/services/data.service';
 import { MenuController } from '@ionic/angular';
+import {DatabaseService, Lesson} from '../../services/database.service';
 
 
 
@@ -13,6 +13,28 @@ import { MenuController } from '@ionic/angular';
 })
 export class LessonSelectPage implements OnInit {
 
+  lessons: Lesson[] = [];
+
+  constructor(private db:DatabaseService) {
+
+  }
+
+
+  ngOnInit() {
+    this.db.getDatabaseState().subscribe(rdy => {
+
+      if(rdy) {
+        this.db.getLessons().subscribe(ls => {
+          this.lessons = ls;
+          console.log(this.lessons);
+        })
+
+      }
+    })
+
+  }
+
+/*
   private selectedTopic:string;
   private todaysLesson:Lesson;
   topicName: string;
@@ -44,10 +66,9 @@ export class LessonSelectPage implements OnInit {
 
 
 
-
-  ngOnInit() {
-  }
-
+*/
+ 
+/*
 startLesson(){
 
 }
@@ -71,5 +92,5 @@ openMenu() {
   this.menu.enable(true, 'first');
   this.menu.open('first');
 }
-
+*/
 }

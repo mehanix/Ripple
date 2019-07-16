@@ -1,12 +1,12 @@
 <ion-slides id="slider-topics" pager="false" [options]="{effect: 'flip'}" >
      
-  <ion-slide *ngFor="let item of topics | async">
+  <ion-slide *ngFor="let item of categories ">
     <ion-card  color="light" no-padding>
-      <img src="{{item.imagine}}" style="width:100%; object-fit: cover;">
+      <img src="{{item.img}}" style="width:100%; object-fit: cover;">
 
       <div class="text-container">
         <ion-card-subtitle></ion-card-subtitle>
-        <ion-card-title>{{item.nume}}</ion-card-title>
+        <ion-card-title>{{item.name}}</ion-card-title>
 
       <ion-card-content>
        {{item.desc}}

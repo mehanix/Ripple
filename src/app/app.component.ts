@@ -22,7 +22,7 @@ export class AppComponent {
     this.platform.ready().then(() => {
 
       storage.get('setupComplete').then((val) => {
-        if(val==true) {
+        if(val==false) {
           this.router.navigateByUrl("/main-tabs");
         }
         else

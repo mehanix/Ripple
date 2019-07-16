@@ -23,7 +23,7 @@ export class TopicsPage implements OnInit {
 
   saveTopics() {
 
-    this.storage.set('topics',this.topicCardsComponent.getSelectedTopics());
+   // this.storage.set('topics',this.topicCardsComponent.getSelectedTopics());
 
   }
 
