@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService, Lesson } from 'src/app/services/data.service';
+// import { DataService, Lesson } from 'src/app/services/data.service';
 import { toSegments } from '@ionic/angular/dist/directives/navigation/stack-utils';
-import { AngularFireStorage } from '@angular/fire/storage';
 import { Observable } from 'rxjs';
 
 interface segment {
 
  // subtitle:string;
-  paragraf:string;
-  img:string;
+  paragraf: string;
+  img: string;
  // imgCaption:string;
 }
 
@@ -22,31 +21,31 @@ interface segment {
 /******* lesson-section: da handle la informatiile lectiei luate din db - prelucrare, render *******/
 export class LessonSectionComponent implements OnInit {
 
-  private lesson:Lesson;
+ /* private lesson:Lesson;
   private segments = [];
   private topicId:string;
   imgUrl: Observable<string | null>;
   private dataLoaded:boolean
 
-  constructor( private dataService:DataService, private storage: AngularFireStorage) { 
+  constructor( private dataService:DataService, private storage: AngularFireStorage) {
 
     this.topicId =  dataService.getTopicId();
     this.dataLoaded=false;
 
   }
-
+*/
   ngOnInit() {
-    
+/*
     this.lesson = this.dataService.getLessonContent();
-    
-  
+
+
 
     const ref = this.storage.ref("topics/" + this.topicId + "/" + this.lesson.id + "/1.jpg");
     this.prepareLessonSegments()
     console.log(this.segments);
-
+*/
   }
-
+/*
   //this is a mess.
   prepareLessonSegments() {
 
@@ -55,18 +54,18 @@ export class LessonSectionComponent implements OnInit {
         const ref = this.storage.ref("topics/" + this.topicId + "/" + this.lesson.id + "/"+ this.lesson.imagini[i]);
         this.imgUrl = ref.getDownloadURL();
         this.imgUrl.subscribe((v) => {
-        
+
           var s: segment = {
             paragraf:this.lesson.paragrafe[i],
             img:v
           };
           console.table(s)
           this.segments[i]=s;
-  
+
         });
       }
       this.dataLoaded = true;
-  
 
-  }
+
+  }*/
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { TopicCardsComponent } from 'src/app/components/topic-cards/topic-cards.component';
 import { Storage } from '@ionic/storage';
-import { FireService } from 'src/app/services/fire.service';
 import { ModalController } from '@ionic/angular';
 import { TopicModalComponent } from 'src/app/components/topic-modal/topic-modal.component';
 
@@ -11,7 +10,7 @@ import { TopicModalComponent } from 'src/app/components/topic-modal/topic-modal.
   styleUrls: ['./topic-select.page.scss'],
 })
 export class TopicSelectPage implements OnInit {
-
+/*
   private topics;
   public selectedTopics:string[];
 
@@ -20,17 +19,17 @@ export class TopicSelectPage implements OnInit {
     
 
   }
-
+*/ 
   ngOnInit() {
-
+/*
     this.topics = this.fireService.getTopicsPrezentare();
     this.storage.get('topics').then((p) => {     
       this.selectedTopics = p;
     }).then(() => {console.log(this.selectedTopics)})
-  
-  
+ */
   }
-
+ 
+   /*
   saveTopics() {
 
     console.log("topicz saved")
@@ -47,5 +46,5 @@ export class TopicSelectPage implements OnInit {
       },
     })
     await modal.present();
-  }
+  */
 }
