@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'main-tabs', pathMatch: 'full' },
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
 
   { path: 'welcome', loadChildren: './setup/welcome/welcome.module#WelcomePageModule' },
   { path: 'topics', loadChildren: './setup/topics/topics.module#TopicsPageModule' },

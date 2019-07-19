@@ -1,35 +1,8 @@
 import { Injectable } from '@angular/core';
-
-export interface ItemPrezentare { 
-  nume: string;
-  imagine: string;
-  desc: string;
-  id?: string;
-}
-
-export interface Topic {
-  nume:string;
-  id:string;
-}
+import { Lesson, Category, DatabaseService } from '../services/database.service';
 
 
-export interface Lesson {
-  imagini: string[];
-  paragrafe: string[];
-  titlu: string;
-  numeTopic: string;
-  desc: string;
-  subtitlu: string;
-  id:string;
-  headerImage:string;
-}
 
-export interface LessonHeader {
-
-  titlu:string;
-  topic:string;
- // subtitlu:string;
-}
 
 @Injectable({
   providedIn: 'root'
@@ -38,32 +11,24 @@ export class DataService {
 
   private lesson:Lesson;
   private topicId:string;
-  private lessonHeader:LessonHeader = {
-    titlu :" this.lesson.titlu",
-    topic :" this.lesson.numeTopic",
-    //subtitlu : "this.lesson.subtitlu"
+ /* private lessonHeader:LessonHeader = {
+    title :" this.lesson.titlu",
+    category :" this.lesson.numeTopic",
+    desc:"",
+    img:""
+  };*/
 
-  };
-
-  constructor() {
+  constructor(db:DatabaseService) {
     
  
 
    }
 
-  /******Getteri/setteri content lectie efectiv******/
-  public setLessonContent(l:Lesson) {
-    this.lesson = l;
+ 
+  
 
-
-  }
-
-  public getLessonContent() {
-    return this.lesson;
-  }
-
-  /******Getter header lesson - nume, categorie, descriere******/
-  public getLessonHeader() {
+  /** Getter header lesson - nume, categorie, descriere */
+  /*public getLessonHeader() {
     this.lessonHeader.titlu = this.lesson.titlu;
     this.lessonHeader.topic = this.lesson.numeTopic;
     //this.lessonHeader.subtitlu = this.lesson.subtitlu;
@@ -72,11 +37,5 @@ export class DataService {
 
   }
 
-  public setTopicId(t:string) {
-    this.topicId = t;
-  }
-
-  public getTopicId() {
-    return this.topicId;
-  }
+ */
 }

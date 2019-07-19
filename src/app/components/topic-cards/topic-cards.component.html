@@ -9,13 +9,14 @@
         <ion-card-title>{{item.name}}</ion-card-title>
 
       <ion-card-content>
-       {{item.desc}}
+       {{item.categoryId}}
+       
     
       </ion-card-content>
     </div>
       <ion-row style="height:15%!important" >
         <ion-col>      
-      <ion-button  (click)="cardClick($event.currentTarget)" color="secondary">
+      <ion-button  (click)="cardClick($event.currentTarget, item.categoryId, item.lessonCount)" color="secondary">
         <ion-icon name="heart-empty" size="large"> </ion-icon>
       </ion-button>
        

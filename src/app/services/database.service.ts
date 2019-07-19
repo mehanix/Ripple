@@ -36,6 +36,12 @@ export interface Category {
   lessonCount:number;
 }
 
+export interface CategoryData {
+
+  categoryId:number,
+  progress:number,
+  lessonCount:number;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -56,7 +62,7 @@ export class DatabaseService {
        .then((db:SQLiteObject) => {
          this.database = db;
          this.seedDatabase();
-       });
+       })
      });
 
  
@@ -68,7 +74,7 @@ export class DatabaseService {
     .subscribe(sql => {
       this.sqlitePorter.importSqlToDb(this.database,sql)
       .then(_ => {
-        this.loadLessons();
+     //   this.loadLessons();
         this.loadCategories();
         this.dbReady.next(true);
       })
@@ -121,7 +127,7 @@ export class DatabaseService {
     })
   }
 
-  // FIXME:
+  // FIXME: 
   loadCategories() {
     return this.database.executeSql('SELECT * FROM categories', []).then(data => {
       let categories:Category[] = [];
@@ -143,30 +149,30 @@ export class DatabaseService {
 
 
   getLesson(lessonIndex:number, categoryId:number): Promise<Lesson> {
-    return this.database.executeSql('SELECT * FROM lessons WHERE lesson_index = ?, category_id = ?', [lessonIndex, categoryId]).then(data => {
+    return this.database.executeSql('SELECT * FROM lessons WHERE index_lesson = ? AND category_id = ?', [lessonIndex, categoryId]).then(data => {
 
       let paragraphs = [];
-      console.log(data);
-      if (data.rows.length > 0) {
-        for (var i=0; i< data.rows.length; i++) {
-          paragraphs = JSON.parse(data.rows.item(i).paragraphs)
-        }
+      
+        //TODO: PARSE JSON
+         // paragraphs = JSON.parse(data.rows.item(0).paragraphs)
+       
           // will this work?
        return {
-          id:data.rows.item(i).id,
-          categoryId:data.rows.item(i).categoryId,
+          id:data.rows.item(0).id,
+          categoryId:data.rows.item(0).id,
 
-          headerTitle:data.rows.item(i).headerTitle,
-          headerDesc:data.rows.item(i).headerDesc,
-          headerImage:data.rows.item(i).headerImage,
+          headerTitle:data.rows.item(0).header_title,
+          headerDesc:data.rows.item(0).header_desc,
+          headerImage:data.rows.item(0).header_image,
 
           paragraphs: paragraphs,
           img: null,
-          lessonIndex:data.rows.item(i).lessonIndex,
-          isComplete:data.rows.item(i).isComplete
+          lessonIndex:data.rows.item(0).index_lesson,
+          isComplete:data.rows.item(0).is_complete
         }
-    }});
+    });
   }
+
 
   // TODO:  UPDATE LESSON STATUS
 }
