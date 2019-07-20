@@ -3,16 +3,30 @@
 
 
 
+@font-face {
+  font-family: 'Raleway';
+  src: url('/ripple-ionic/src/assets/fonts/Raleway-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/ripple-ionic/src/assets/fonts/Pacifico-Regular.ttf') format('ttf');
+}
 
 /** Ionic CSS Variables **/
-:root {
+:root,
+:root[mode='ios'],
+:root[mode='md'] {
 
-
+  
 
 
   /** fonts **/
-  --ion-font-family: 'Raleway';
-
+  --ion-font-family: 'Raleway', sans-serif !important;
+  font-family: 'Raleway', sans-serif !important;
   /** primary **/
   --ion-color-primary: #263056;
   --ion-color-primary-rgb: 38,48,86;
@@ -86,7 +100,9 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
   
-  $font-path: "assets/fonts";
+  $font-path: "../assets/fonts";
+  $font-family-base: "Raleway";
+
 
 }
 

@@ -2,7 +2,7 @@ ion-content {
     --background: #263056 url('../../../assets/img/background-deco.png') no-repeat center top / contain;
     --overflow: hidden;
     h1 {
-        font-family:'Pacifico';
+        font-family:'Pacifico'!important;
     }
 }
 
@@ -33,7 +33,7 @@ ion-card {
 }
 
 h1 {
-    font-family: 'Pacifico';
+    font-family: 'Pacifico',cursive;
     font-size: 3.65em!important;
 
 }

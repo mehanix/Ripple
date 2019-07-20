@@ -10,19 +10,7 @@
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
 @import './theme/variables.scss';
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('/assets/fonts/Raleway-Regular.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Pacifico';
-    font-style: normal;
-    font-weight: normal;
-    src: url('/assets/fonts/Pacifico-Regular.ttf') format('ttf');
-  }
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Raleway&display=swap');
 
   ion-title {
     position: absolute;
@@ -34,3 +22,4 @@
     text-align: center;
     color:black;
   }
+

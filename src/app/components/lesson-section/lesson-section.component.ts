@@ -3,13 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { toSegments } from '@ionic/angular/dist/directives/navigation/stack-utils';
 import { Observable } from 'rxjs';
 
-interface segment {
 
- // subtitle:string;
-  paragraf: string;
-  img: string;
- // imgCaption:string;
-}
 
 @Component({
   selector: 'app-lesson-section',

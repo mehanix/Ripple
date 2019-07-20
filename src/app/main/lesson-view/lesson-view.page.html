@@ -19,12 +19,20 @@
 </ion-header>
 <ion-content>
   <div class="title-section ion-text-center">
-      <h4>{{lessonHeader.topic}}</h4>
-      <h1>{{lessonHeader.titlu}}</h1>
+      <h4>Categ</h4>
+      <h1>{{lesson.headerTitle}}</h1>
   </div>
   
   <div class="content">
-    <app-lesson-section></app-lesson-section>
+      <section  *ngFor="let item of segments">
+          <!-- <h4 class="ion-padding-start" style="margin-bottom:0" >{{item.subtitlu}}</h4> -->
+           <p class="ion-margin" style="text-align: justify">{{item.paragraph}}</p>
+           <figure style="margin-left:0; margin-right:0;">
+             <img src="{{item.img}} " style="width:100vw">
+             <figcaption style="text-align: center">{{item.imgCaption}}</figcaption>
+           </figure>
+         </section>
+    <!-- <app-lesson-section></app-lesson-section> -->
   </div>
 
   <div class="social">

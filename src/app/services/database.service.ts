@@ -55,6 +55,7 @@ export class DatabaseService {
   categories = new BehaviorSubject([]);
   constructor(private plt:Platform, private sqlitePorter: SQLitePorter, private sqlite:SQLite, private http:HttpClient) {
      this.plt.ready().then(() => {
+       
        this.sqlite.create({
          name:'content.db',
          location:'default'
@@ -74,7 +75,7 @@ export class DatabaseService {
     .subscribe(sql => {
       this.sqlitePorter.importSqlToDb(this.database,sql)
       .then(_ => {
-     //   this.loadLessons();
+        this.loadLessons();
         this.loadCategories();
         this.dbReady.next(true);
       })
@@ -98,13 +99,14 @@ export class DatabaseService {
     return this.database.executeSql('SELECT * FROM lessons', []).then(data => {
       let lessons: Lesson[] = [];
       let paragraphs = [];
+      let img=[];
       console.log("dbservice")
       console.log(data);
       if (data.rows.length > 0) {
         for (var i=0; i< data.rows.length; i++) {
-      //    if (data.rows.item(i).paragraphs != '') {
-     //     paragraphs = JSON.parse(data.rows.item(i).paragraphs)
-      //    }
+
+          paragraphs = JSON.parse(data.rows.item(i).paragraphs)
+
           lessons.push ({
             id:data.rows.item(i).id,
             categoryId:data.rows.item(i).category_id,
@@ -113,8 +115,8 @@ export class DatabaseService {
             headerDesc:data.rows.item(i).header_desc,
             headerImage:data.rows.item(i).header_img,
   
-            paragraphs: paragraphs,
-            img: null,
+            paragraphs: data.rows.item(i).paragraphs,
+            img: data.rows.item(i).img,
             lessonIndex:data.rows.item(i).lesson_index,
             isComplete:data.rows.item(i).is_complete
           })
@@ -143,7 +145,7 @@ export class DatabaseService {
         }
       }
       this.categories.next(categories);
-    })
+    }).catch(err => {console.log(err)})
 
   }
 
@@ -152,10 +154,11 @@ export class DatabaseService {
     return this.database.executeSql('SELECT * FROM lessons WHERE index_lesson = ? AND category_id = ?', [lessonIndex, categoryId]).then(data => {
 
       let paragraphs = [];
-      
+      let img=[];
         //TODO: PARSE JSON
-         // paragraphs = JSON.parse(data.rows.item(0).paragraphs)
-       
+          paragraphs = JSON.parse(data.rows.item(0).paragraphs)
+          img = JSON.parse(data.rows.item(0).img)
+
           // will this work?
        return {
           id:data.rows.item(0).id,
@@ -163,10 +166,10 @@ export class DatabaseService {
 
           headerTitle:data.rows.item(0).header_title,
           headerDesc:data.rows.item(0).header_desc,
-          headerImage:data.rows.item(0).header_image,
+          headerImage:data.rows.item(0).header_img,
 
           paragraphs: paragraphs,
-          img: null,
+          img: img,
           lessonIndex:data.rows.item(0).index_lesson,
           isComplete:data.rows.item(0).is_complete
         }
