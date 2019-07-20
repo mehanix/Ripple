@@ -24,6 +24,14 @@ export class DataService {
 
    }
 
+   setLesson(d:Lesson) {
+     this.lesson = d;
+     console.log("dataservice", this.lesson);
+   }
+
+   getLesson() {
+     return this.lesson;
+   }
  
   
 

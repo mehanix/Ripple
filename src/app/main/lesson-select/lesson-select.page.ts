@@ -3,6 +3,7 @@ import { Storage } from '@ionic/storage';
 //import { DataService, Lesson } from 'src/app/services/data.service';
 import { MenuController } from '@ionic/angular';
 import {DatabaseService, CategoryData, Lesson} from '../../services/database.service';
+import { DataService } from 'src/app/services/data.service';
 
 export interface LessonHeader {
 
@@ -24,7 +25,7 @@ export class LessonSelectPage implements OnInit {
   categoryData:CategoryData[] = [];
   category:CategoryData;
   lesson:Lesson;
-  constructor(private db:DatabaseService, private storage:Storage) {
+  constructor(private db:DatabaseService, private storage:Storage, private data:DataService) {
     this.storage.get("categories").then(cats => {
       console.log("Categorii constructor",cats);
       this.categoryData = cats;
@@ -41,6 +42,7 @@ export class LessonSelectPage implements OnInit {
             this.lesson=lesson;
             console.log(lesson);
             console.log("aaaa")
+            this.data.setLesson(lesson);
             
           }).catch(err => {console.log(err)})
     
@@ -51,6 +53,10 @@ export class LessonSelectPage implements OnInit {
   })
     
  
+}
+
+getLessonContent() {
+  return this.lesson;
 }
 
 ngOnInit() {

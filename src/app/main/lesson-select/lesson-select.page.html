@@ -17,7 +17,7 @@
             <ion-card-title >{{(lesson)?.headerTitle}}</ion-card-title>
     
           <ion-card-content>
-            {{(lesson)?.headerDesc}}
+            {{lesson.headerDesc}}
           </ion-card-content>
         </div>
          
@@ -27,7 +27,7 @@
   <ion-row style="height:13vh!important;"class="justify-content-center align-items-center"  align="center">
 
       <ion-col class="ion-align-self-center">
-          <ion-button (click)="startLesson()" [routerLink]="'/lesson-view/' + 'aaa'" >Start lesson!</ion-button>
+          <ion-button routerLink="/lesson-view/" >Start lesson!</ion-button>
 
         </ion-col>
 

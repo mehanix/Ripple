@@ -30,7 +30,7 @@ export class AppComponent {
           this.router.navigateByUrl("/welcome");
         }
   
-        this.statusBar.styleDefault();
+        this.statusBar.styleBlackTranslucent();
         this.splashScreen.hide();
   
       });
