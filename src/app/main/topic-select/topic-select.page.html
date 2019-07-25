@@ -5,6 +5,68 @@
 </ion-header>
 
 <ion-content>
+
+<!-- List of Sliding Items -->
+<ion-list>
+    <ion-list-header>
+      Selected Courses:
+    </ion-list-header>
+
+    <ion-item-sliding *ngFor="let item of categories" >
+
+      <ion-item  *ngIf="item.progress!==null">
+          <ion-thumbnail slot="start">
+              <img src="{{item.img}}">
+            </ion-thumbnail>
+            <ion-label>
+              <h2>{{item.name}}</h2>
+              <p>{{item.desc}}</p>
+              <ion-progress-bar color="primary" value="{{item.progress/item.lessonCount}}"></ion-progress-bar>
+            </ion-label>
+      </ion-item>
+
+      <ion-item-options  side="end">
+          <ion-item-option color="secondary" (click)="deselectCategory(item)"><ion-icon size="large" name="trash" style="padding-left:5pt; padding-right:5pt"></ion-icon></ion-item-option>
+        </ion-item-options>
+
+    </ion-item-sliding>
+
+      
+     
+   
+
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      Available Courses:
+    </ion-list-header>
+
+    <!-- TBA -->
+
+    <ion-item-sliding *ngFor="let item of categories">
+
+        <ion-item *ngIf="item.progress===null">
+            <ion-thumbnail slot="start">
+                <img src="{{item.img}}">
+              </ion-thumbnail>
+              <ion-label>
+                  <h2>{{item.name}}</h2>
+                  <p>{{item.desc}}</p>
+              
+              </ion-label>
+        </ion-item>
+  
+        <ion-item-options  side="end">
+            <ion-item-option color="secondary" (click)="selectCategory(item)"><ion-icon size="large" name="add" style="padding-left:5pt; padding-right:5pt"></ion-icon></ion-item-option>
+          </ion-item-options>
+  
+      </ion-item-sliding>
+  </ion-list>
+</ion-content>
+
+  <!--
+
 <ion-grid no-padding>
         <ion-row no-padding>
           <ion-col size="6" no-padding *ngFor="let item of topics | async">
@@ -20,5 +82,4 @@
       
 
       </ion-grid>
-
-</ion-content>
+-->
