@@ -34,6 +34,7 @@ export interface Category {
   desc:string;
   img:string;
   lessonCount:number;
+  progress:number;
 }
 
 export interface CategoryData {
@@ -131,6 +132,7 @@ export class DatabaseService {
 
   // FIXME: 
   loadCategories() {
+    console.log("fired loadCategories")
     return this.database.executeSql('SELECT * FROM categories', []).then(data => {
       let categories:Category[] = [];
       if (data.rows.length > 0) {
@@ -140,14 +142,32 @@ export class DatabaseService {
             name: data.rows.item(i).name,
             desc: data.rows.item(i).descr,
             img: data.rows.item(i).img,
-            lessonCount:data.rows.item(i).lesson_count
+            lessonCount:data.rows.item(i).lesson_count,
+            progress:data.rows.item(i).progress
            });
         }
       }
+      console.log("current categories", categories)
       this.categories.next(categories);
     }).catch(err => {console.log(err)})
 
   }
+
+ 
+  resetProgress(categoryId:number) {
+
+
+      this.database.executeSql("UPDATE categories SET progress = null WHERE id = ? " , [ categoryId ] ).then(() => {this.loadCategories()})
+  }
+
+  setProgress(val:number, categoryId:number) {
+
+    this.database.executeSql("UPDATE categories SET progress = ? WHERE id = ? " , [ val, categoryId ] ).then(() => {this.loadCategories()}).catch(err => {console.log("eroare setProgress",err)})
+
+  }
+
+
+
 
 
   getLesson(lessonIndex:number, categoryId:number): Promise<Lesson> {

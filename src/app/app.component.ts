@@ -21,7 +21,7 @@ export class AppComponent {
   ) {
     this.platform.ready().then(() => {
 
-      storage.get('setupComplete').then((val) => {
+     /* storage.get('setupComplete').then((val) => {
         if(val==false) {
           this.router.navigateByUrl("/main-tabs");
         }
@@ -33,7 +33,7 @@ export class AppComponent {
         this.statusBar.styleBlackTranslucent();
         this.splashScreen.hide();
   
-      });
+      }); */
       });
 
 

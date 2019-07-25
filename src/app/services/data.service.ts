@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Lesson, Category, DatabaseService } from '../services/database.service';
+import { Lesson, Category, DatabaseService, CategoryData } from '../services/database.service';
 
 
 
@@ -20,7 +20,7 @@ export class DataService {
 
   constructor(db:DatabaseService) {
     
- 
+  
 
    }
 

@@ -15,7 +15,7 @@ const routes: Routes = [
             path: 'topic-select', loadChildren: '../topic-select/topic-select.module#TopicSelectPageModule'
         },
         {
-            path: 'options', loadChildren: '../settings/settings.module#SettingsPageModule'
+            path: 'settings', loadChildren: '../settings/settings.module#SettingsPageModule'
         },
         {
             path: 'about', loadChildren: '../about/about.module#AboutPageModule'

@@ -29,7 +29,7 @@ export class LessonSelectPage implements OnInit {
     this.storage.get("categories").then(cats => {
       console.log("Categorii constructor",cats);
       this.categoryData = cats;
-  }).then(_ => {
+  }).then(() => {
     this.db.getDatabaseState().subscribe(rdy => {
       if(rdy) {
 
