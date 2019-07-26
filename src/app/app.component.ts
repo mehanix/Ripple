@@ -21,19 +21,23 @@ export class AppComponent {
   ) {
     this.platform.ready().then(() => {
 
-     /* storage.get('setupComplete').then((val) => {
-        if(val==false) {
+      storage.get('setupComplete').then((val) => {
+        if(val==true) {
           this.router.navigateByUrl("/main-tabs");
         }
         else
         {
           this.router.navigateByUrl("/welcome");
+
+        
+          this.storage.set('date',-1)
         }
   
         this.statusBar.styleBlackTranslucent();
         this.splashScreen.hide();
   
-      }); */
+      }); 
+      
       });
 
 

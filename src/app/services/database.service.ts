@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Platform } from '@ionic/angular';
-
+import { Storage } from '@ionic/storage'
 
 export interface Lesson {
 
@@ -56,7 +56,7 @@ export class DatabaseService {
 
   lessons = new BehaviorSubject([]);
   categories = new BehaviorSubject([]);
-  constructor(private plt:Platform, private sqlitePorter: SQLitePorter, private sqlite:SQLite, private http:HttpClient) {
+  constructor(private plt:Platform, private storage:Storage, private sqlitePorter: SQLitePorter, private sqlite:SQLite, private http:HttpClient) {
      this.plt.ready().then(() => {
        
        this.sqlite.create({
@@ -65,7 +65,17 @@ export class DatabaseService {
        })
        .then((db:SQLiteObject) => {
          this.database = db;
-         this.seedDatabase();
+         this.storage.get('setupComplete').then(isComplete => {
+           console.log("setupComplete is", isComplete)
+         if(isComplete!==true)
+             this.seedDatabase();
+             else
+             {
+              this.loadCategories();
+              this.dbReady.next(true)
+             }
+         })
+        
        })
      });
 
@@ -78,7 +88,7 @@ export class DatabaseService {
     .subscribe(sql => {
       this.sqlitePorter.importSqlToDb(this.database,sql)
       .then(_ => {
-        this.loadLessons();
+       // this.loadLessons();
         this.loadCategories();
         this.dbReady.next(true);
       })
@@ -136,6 +146,7 @@ export class DatabaseService {
   // FIXME: 
   loadCategories() {
     console.log("fired loadCategories")
+    
     return this.database.executeSql('SELECT * FROM categories', []).then(data => {
       let categories:Category[] = [];
       if (data.rows.length > 0) {

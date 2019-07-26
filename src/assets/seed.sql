@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS lessons;
 
 CREATE TABLE IF NOT EXISTS categories(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, descr text, img blob, lesson_count integer, progress integer);
 
-CREATE TABLE IF NOT EXISTS lessons(id INTEGER PRIMARY KEY AUTOINCREMENT, header_title text, header_desc text, header_img text, category_id integer NOT NULL, paragraphs TEXT, img TEXT, index_lesson integer, is_complete integer);
+CREATE TABLE IF NOT EXISTS lessons(id INTEGER PRIMARY KEY AUTOINCREMENT, header_title text, header_desc text, header_img text, category_id integer NOT NULL, paragraphs TEXT, img TEXT, index_lesson integer, is_complete bool);
 
 INSERT OR IGNORE INTO 'categories' (id,name,img,descr,lesson_count, progress) VALUES (
     1,
