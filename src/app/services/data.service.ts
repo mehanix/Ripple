@@ -18,7 +18,7 @@ export class DataService {
     img:""
   };*/
 
-  constructor(db:DatabaseService) {
+  constructor() {
     
   
 
