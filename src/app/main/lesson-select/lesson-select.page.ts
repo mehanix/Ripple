@@ -25,6 +25,8 @@ export class LessonSelectPage implements OnInit {
   categoryData:CategoryData[] = [];
   category:CategoryData;
   lesson:Lesson;
+  progress:number;
+
   constructor(private db:DatabaseService, private storage:Storage, private data:DataService) {
     this.storage.get("categories").then(cats => {
       console.log("Categorii constructor",cats);
@@ -36,17 +38,35 @@ export class LessonSelectPage implements OnInit {
         //TODO: prepare lesson, then get lesson header here async.
          this.category = this.categoryData[Math.floor((Math.random()*this.categoryData.length))]
   
-        console.log("Categorie aleasa",this.category);
-       // if(this.category.progress<this.category.lessonCount){
-          this.db.getLesson(this.category.progress+1,this.category.categoryId).then(lesson => { 
-            this.lesson=lesson;
-            console.log(lesson);
-            console.log("aaaa")
-            this.data.setLesson(lesson);
+            console.log("Categorie aleasa",this.category);
+            //this.category.progress<this.category.lessonCount
+         
+            //daca ziua de azi e egala cu cea salvata, trebuie incarcata lectie noua
+
+            this.storage.get('date').then(date => {
+              console.log("Date:",date, new Date().getDay())
+              if (date !== new Date().getDay())
+                this.progress=this.category.progress+1;
+                else
+                this.progress=this.category.progress;
+            }).then(() => {
+              console.log(this.progress)
+              this.db.getLesson(this.progress,this.category.categoryId).then(lesson => { 
+   
+               this.lesson=lesson;
+               console.log(lesson);
+               console.log("aaaa")
+               this.data.setLesson(lesson);
+
+            })
+            
+            
+           
+            
             
           }).catch(err => {console.log(err)})
     
-   
+  
       }
     })
 

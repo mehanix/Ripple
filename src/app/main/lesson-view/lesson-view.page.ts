@@ -70,31 +70,28 @@ export class LessonViewPage implements OnInit {
 
   completeLesson(id:number) {
 
-    console.log("IslessonComplete is:",this.isLessonComplete)
     if(this.isLessonComplete === 0) {
-      console.log("Sunt in if!")
+  
       this.isLessonComplete = 1;
       this.categoryData.forEach(c => {
         if (c.categoryId == id)
           c.progress++;
-          console.log("modified categoryData",this.categoryData)
           //localstorage
           this.storage.set('categories',this.categoryData)
 
           //db
-          this.db.setProgress(c.progress,id)
-       
+          this.db.setProgress(c.progress,id) 
           this.db.setLessonComplete(this.lesson.id,1)
 
           //data service FIXME: get rid of it......
           this.lesson.isComplete=1;
           this.data.setLesson(this.lesson)
+          this.storage.set('date',new Date().getDay())
           //TODO: SET LESSON COMPLETE TO TRUE IN DB (scrie functie pt asta)
          
       })
 
     }
-    console.log("IslessonComplete is:",this.isLessonComplete)
 
     
   }
