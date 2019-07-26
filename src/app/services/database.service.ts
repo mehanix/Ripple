@@ -22,7 +22,7 @@ export interface Lesson {
   paragraphs: string[];
   img: string[];
   lessonIndex:number;
-  isComplete:boolean;
+  isComplete:number;
   
 
 }
@@ -48,6 +48,8 @@ export interface CategoryData {
   providedIn: 'root'
 })
 export class DatabaseService {
+
+
 
   private database: SQLiteObject;
   private dbReady: BehaviorSubject<boolean> = new BehaviorSubject(false);
@@ -126,6 +128,7 @@ export class DatabaseService {
           // will this work?
         
       }
+    console.log("current state of lessons", lessons)
       this.lessons.next(lessons);
     })
   }
@@ -147,7 +150,7 @@ export class DatabaseService {
            });
         }
       }
-      console.log("current categories", categories)
+      //console.log("current categories", categories)
       this.categories.next(categories);
     }).catch(err => {console.log(err)})
 
@@ -196,6 +199,13 @@ export class DatabaseService {
     });
   }
 
+
+  setLessonComplete(id: number, val: number) {
+    this.database.executeSql("UPDATE lessons SET is_complete = ? WHERE id = ? " , [ val, id ] ).then(() => {
+      
+    }).catch(err => {console.log("eroare setProgress",err)})
+
+  }
 
   // TODO:  UPDATE LESSON STATUS
 }
