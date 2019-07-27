@@ -71,7 +71,7 @@ INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id
   '1',
   '[" 2Cat ipsum dolor sit amet, the fat cat sat on the mat bat away with paws and love furrier and even more furrier hairball. Hack decide to want nothing to do with my owner today push your water glass on the floor and that box? i can fit in that box. Cat is love, cat is life claws in your leg. Hunt anything that moves check cat door for ambush 10 times before coming in i''m bored inside, let me out i''m lonely outside, let me in i can''t make up my mind whether to go in or out, guess i''ll just stand partway in and partway out, contemplating the universe for half an hour how dare you nudge me with your foot?!?!",
 "Experiences short bursts of poo-phoria after going to the loo attack the child and cat cat moo moo lick ears lick paws i''m going to lap some water out of my master''s cup meow or fight an alligator and win. Lick sellotape hit you unexpectedly, but hiss and stare at nothing then run suddenly away or stare out cat door then go back inside nap all day. Eat grass, throw it back up try to jump onto window and fall while scratching at wall shred","Hide when guests come over meowzer going to catch the red dot today going to catch the red dot today so eat all the power cords hack up furballs. This cat happen now, it was too purr-fect!!! instantly break out into full speed gallop across the house for no reason i cry and cry and cry unless you pet me, and then maybe i cry just for fun but refuse to drink water except out of someone''s glass sweet beast chase laser, and jump around on couch, meow constantly until given food, ."]',
-  'img array here',
+  '["https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500","https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500","https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"]',
   '2',
   '0'
 );
@@ -83,31 +83,7 @@ INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id
   '1',
   '["Cat ipsum dolor sit amet, the fat cat sat on the mat bat away with paws and love furrier and even more furrier hairball. Hack decide to want nothing to do with my owner today push your water glass on the floor and that box? i can fit in that box. Cat is love, cat is life claws in your leg. Hunt anything that moves check cat door for ambush 10 times before coming in i''m bored inside, let me out i''m lonely outside, let me in i can''t make up my mind whether to go in or out, guess i''ll just stand partway in and partway out, contemplating the universe for half an hour how dare you nudge me with your foot?!?!",
 "Experiences short bursts of poo-phoria after going to the loo attack the child and cat cat moo moo lick ears lick paws i''m going to lap some water out of my master''s cup meow or fight an alligator and win. Lick sellotape hit you unexpectedly, but hiss and stare at nothing then run suddenly away or stare out cat door then go back inside nap all day. Eat grass, throw it back up try to jump onto window and fall while scratching at wall shred","Hide when guests come over meowzer going to catch the red dot today going to catch the red dot today so eat all the power cords hack up furballs. This cat happen now, it was too purr-fect!!! instantly break out into full speed gallop across the house for no reason i cry and cry and cry unless you pet me, and then maybe i cry just for fun but refuse to drink water except out of someone''s glass sweet beast chase laser, and jump around on couch, meow constantly until given food, ."]',
-  'img array here',
+  '["https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500","https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500","https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"]',
   '3',
-  '0'
-);
-INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,category_id,paragraphs,index_lesson,is_complete) VALUES (
-  'lesson header title',
-  'leson header desc',
-  '1',
-  'js array here',
-  '1',
-  '0'
-);
-INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,category_id,paragraphs,index_lesson,is_complete) VALUES (
-  'lesson header title',
-  'leson header desc',
-  '1',
-  'js array here',
-  '1',
-  '0'
-);
-INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,category_id,paragraphs,index_lesson,is_complete) VALUES (
-  'lesson header title',
-  'leson header desc',
-  '1',
-  'js array here',
-  '1',
   '0'
 );

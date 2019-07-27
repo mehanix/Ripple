@@ -10,14 +10,14 @@
   <ion-row class="lessons-container justify-content-center align-items-center"  align="center">
       
     <ion-card style="width:100%; margin-top:0;"  color="light" no-padding>
-          <img src="{{lesson.headerImage}}" style=" height:50%; width:100%; object-fit: cover;">
+          <img src="{{(lesson)?.headerImage}}" style=" height:50%; width:100%; object-fit: cover;">
     
           <div class="text-container">
             <ion-card-subtitle>{{(topicName)}}</ion-card-subtitle>
             <ion-card-title >{{(lesson)?.headerTitle}}</ion-card-title>
     
           <ion-card-content>
-            {{lesson.headerDesc}}
+            {{(lesson)?.headerDesc}}
           </ion-card-content>
         </div>
          
@@ -27,7 +27,7 @@
   <ion-row style="height:13vh!important;"class="justify-content-center align-items-center"  align="center">
 
       <ion-col class="ion-align-self-center">
-          <ion-button type="button" routerLink="/lesson-view/" >{{ lesson.isComplete == false ? 'Start Lesson!' : 'Reread lesson' }}</ion-button>
+          <ion-button type="button" (click)="startLesson()" routerLink="/lesson-view/" >{{ (lesson)?.isComplete == false ? 'Start Lesson!' : 'Reread lesson' }}</ion-button>
 
         </ion-col>
 

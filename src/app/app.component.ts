@@ -31,6 +31,7 @@ export class AppComponent {
 
         
           this.storage.set('date',-1)
+          this.storage.set('bookmarks',[]);
         }
   
         this.statusBar.styleBlackTranslucent();

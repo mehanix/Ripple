@@ -5,6 +5,7 @@ import { Lesson, CategoryData, DatabaseService } from 'src/app/services/database
 import { DataService } from 'src/app/services/data.service';
 //import { DataService, LessonHeader } from 'src/app/services/data.service';
 import { Storage } from '@ionic/storage';
+import { ToastController } from '@ionic/angular';
 
 interface Segment {
 
@@ -24,12 +25,13 @@ export class LessonViewPage implements OnInit {
   segments:Segment[] = [];
   categoryData:CategoryData[] = [];
   isLessonComplete:number;
-
-  constructor(private data:DataService, private storage:Storage, private db:DatabaseService) {
+  constructor(private data:DataService, private storage:Storage, private db:DatabaseService, public toastController: ToastController) {
 
    // this.lesson = l.getLessonContent();
 
     this.storage.get('categories').then(c => {this.categoryData = c})
+    this.db.loadLessons()
+    
   }
   ngOnInit() {
     
@@ -37,6 +39,7 @@ export class LessonViewPage implements OnInit {
 
      
       this.lesson = this.data.getLesson()
+      console.log("Lectie incarcata:", this.lesson);
       this.isLessonComplete = this.lesson.isComplete;
       console.table("isLessonComplete",this.isLessonComplete);
     
@@ -86,7 +89,7 @@ export class LessonViewPage implements OnInit {
           //data service FIXME: get rid of it......
           this.lesson.isComplete=1;
           this.data.setLesson(this.lesson)
-          this.storage.set('date',new Date().getDay())
+          this.storage.set('date',new Date().getDate())
           //TODO: SET LESSON COMPLETE TO TRUE IN DB (scrie functie pt asta)
          
       })
@@ -94,5 +97,41 @@ export class LessonViewPage implements OnInit {
     }
 
     
+  }
+
+  setBookmark(l:Lesson) {
+    this.storage.get('bookmarks').then (b => {
+      let bookmarks:Lesson[] = b;
+
+
+      if(bookmarks.findIndex((val) => {
+        return val.categoryId == l.categoryId && val.id == l.id;
+      })===-1)
+        {
+          bookmarks.push(l)
+        
+          this.storage.set('bookmarks',bookmarks).then(() => {
+          
+          this.presentToast("Lectie adaugata la favorite! :)")
+
+          })
+     
+          
+        }
+        else
+        {
+          this.presentToast("Lectie deja existenta la favorite!")
+
+        }
+
+    })
+  }
+
+  async presentToast(msg:string) {
+    const toast = await this.toastController.create({
+      message: msg,
+      duration: 2000
+    });
+    toast.present();
   }
 }

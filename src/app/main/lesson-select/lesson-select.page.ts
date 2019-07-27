@@ -36,7 +36,8 @@ export class LessonSelectPage implements OnInit {
       if(rdy) {
 
         //TODO: prepare lesson, then get lesson header here async.
-         this.category = this.categoryData[Math.floor((Math.random()*this.categoryData.length))]
+   
+        this.category=this.categoryData[Math.floor((Math.random()*this.categoryData.length))];
   
             console.log("Categorie aleasa",this.category);
             //this.category.progress<this.category.lessonCount
@@ -44,8 +45,8 @@ export class LessonSelectPage implements OnInit {
             //daca ziua de azi e egala cu cea salvata, trebuie incarcata lectie noua
 
             this.storage.get('date').then(date => {
-              console.log("Date:",date, new Date().getDay())
-              if (date !== new Date().getDay())
+              console.log("Date:",date, new Date().getDate())
+              if (date !== new Date().getDate())
                 this.progress=this.category.progress+1;
                 else
                 this.progress=this.category.progress;
@@ -77,6 +78,11 @@ export class LessonSelectPage implements OnInit {
 
 getLessonContent() {
   return this.lesson;
+}
+startLesson() {
+
+  this.data.setLesson(this.lesson);
+
 }
 
 ngOnInit() {
