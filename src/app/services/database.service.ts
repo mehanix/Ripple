@@ -88,7 +88,7 @@ export class DatabaseService {
     .subscribe(sql => {
       this.sqlitePorter.importSqlToDb(this.database,sql)
       .then(_ => {
-       // this.loadLessons();
+        this.loadLessons();
         this.loadCategories();
         this.dbReady.next(true);
       })
@@ -112,8 +112,8 @@ export class DatabaseService {
     return this.database.executeSql('SELECT * FROM lessons', []).then(data => {
       let lessons: Lesson[] = [];
       let paragraphs = [];
-      let img=[];
-      console.log("dbservice")
+
+      console.log("Lessons loaded:")
       console.log(data);
       if (data.rows.length > 0) {
         for (var i=0; i< data.rows.length; i++) {
@@ -140,7 +140,7 @@ export class DatabaseService {
       }
     console.log("current state of lessons", lessons)
       this.lessons.next(lessons);
-    })
+    }).catch(err => {console.log(err)})
   }
 
   // FIXME: 
@@ -186,7 +186,9 @@ export class DatabaseService {
 
   getLesson(lessonIndex:number, categoryId:number): Promise<Lesson> {
     return this.database.executeSql('SELECT * FROM lessons WHERE index_lesson = ? AND category_id = ?', [lessonIndex, categoryId]).then(data => {
-
+      console.log("LessonIndex:",lessonIndex)
+      console.log("categoryId",categoryId)
+      console.log("getLesson data:", data.rows.item(0))
       let paragraphs = [];
       let img=[];
         //TODO: PARSE JSON
@@ -196,7 +198,7 @@ export class DatabaseService {
           // will this work?
        return {
           id:data.rows.item(0).id,
-          categoryId:data.rows.item(0).id,
+          categoryId:data.rows.item(0).category_id,
 
           headerTitle:data.rows.item(0).header_title,
           headerDesc:data.rows.item(0).header_desc,

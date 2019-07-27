@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'topic-select', loadChildren: './main/topic-select/topic-select.module#TopicSelectPageModule' },
   { path: 'settings', loadChildren: './main/settings/settings.module#SettingsPageModule' },
   { path: 'about', loadChildren: './main/about/about.module#AboutPageModule' },
-  { path: 'main-tabs', loadChildren: './main/main-tabs/main-tabs.module#MainTabsPageModule' },
+  { path: 'main-tabs', loadChildren: './main/main-tabs/main-tabs.module#MainTabsPageModule' },  { path: 'bookmarks', loadChildren: './main/bookmarks/bookmarks.module#BookmarksPageModule' },
+
 
 
 

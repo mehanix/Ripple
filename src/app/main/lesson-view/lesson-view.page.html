@@ -19,7 +19,6 @@
 </ion-header>
 <ion-content>
   <div class="title-section ion-text-center">
-      <h4>Categ</h4>
       <h1>{{lesson.headerTitle}}</h1>
   </div>
   
@@ -44,7 +43,7 @@
             </ion-buttons>
         Complete lesson!</ion-toolbar>
 
-    <ion-toolbar  (click)="clack()" id="toolbar-share" >
+    <ion-toolbar  (click)="setBookmark(lesson)" id="toolbar-share" >
         <ion-buttons slot="secondary">
             <ion-button>
               <ion-icon slot="icon-only" name="share" style="color:white"></ion-icon>
@@ -52,7 +51,7 @@
           </ion-buttons>
       Share with your friends
     </ion-toolbar>
-    <ion-toolbar  (click)="clack()" id="toolbar-bookmark">
+    <ion-toolbar  (click)="setBookmark(lesson)" id="toolbar-bookmark">
         <ion-buttons slot="secondary">
             <ion-button>
               <ion-icon slot="icon-only" name="bookmark" style="color:white"></ion-icon>

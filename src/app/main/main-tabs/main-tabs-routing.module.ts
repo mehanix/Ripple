@@ -18,7 +18,7 @@ const routes: Routes = [
             path: 'settings', loadChildren: '../settings/settings.module#SettingsPageModule'
         },
         {
-            path: 'about', loadChildren: '../about/about.module#AboutPageModule'
+            path: 'bookmarks', loadChildren: '../bookmarks/bookmarks.module#BookmarksPageModule' //TODO: CHANGE TO BOOKMARKS
         },
     
         {
