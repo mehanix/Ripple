@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+ // { path: '', redirectTo: 'welcome', pathMatch: 'full' },
 
   { path: 'welcome', loadChildren: './setup/welcome/welcome.module#WelcomePageModule' },
   { path: 'topics', loadChildren: './setup/topics/topics.module#TopicsPageModule' },
@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'topic-select', loadChildren: './main/topic-select/topic-select.module#TopicSelectPageModule' },
   { path: 'settings', loadChildren: './main/settings/settings.module#SettingsPageModule' },
   { path: 'about', loadChildren: './main/about/about.module#AboutPageModule' },
-  { path: 'main-tabs', loadChildren: './main/main-tabs/main-tabs.module#MainTabsPageModule' },  { path: 'bookmarks', loadChildren: './main/bookmarks/bookmarks.module#BookmarksPageModule' },
+  { path: 'main-tabs', loadChildren: './main/main-tabs/main-tabs.module#MainTabsPageModule' },
+  { path: 'bookmarks', loadChildren: './main/bookmarks/bookmarks.module#BookmarksPageModule' },
 
 
 

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { TopicCardsComponent } from 'src/app/components/topic-cards/topic-cards.component';
 import { Storage } from '@ionic/storage';
-import { ModalController } from '@ionic/angular';
+import { ModalController, AlertController } from '@ionic/angular';
 import { TopicModalComponent } from 'src/app/components/topic-modal/topic-modal.component';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { Category, DatabaseService, CategoryData } from 'src/app/services/database.service';
@@ -25,39 +25,11 @@ export class TopicSelectPage implements OnInit {
   storageData: CategoryData[]; //array din localStorage cu categoriile alese de user
 
   categories: Category[] = []
-  constructor(private db:DatabaseService, private storage:Storage) {
+  constructor(private db:DatabaseService, private storage:Storage, public alertController: AlertController) {
 
     db.getCategories().subscribe(c => {this.categories = c});
     this.storage.get('categories').then(data => { this.storageData = data;})
 
-  //  this.selectedCategories = loadSelectedCategories();
-
-    /*
-
-   this.storage.get('categories').then(data => { this.storageData = data;})
-   .then(() => {
-     this.db.getCategories().pipe(map(arr => 
-      arr.filter( r =>  
-        //cauta in arrayul de obiecte categoryData categoriile din storageData care au fost selectate de user
-        //si salveaza-le datele intr-un nou observable
-        this.storageData.filter( o => (o.categoryId == r.categoryId)).length > 0 ))).subscribe(a => { 
-        console.log("save me lord", a); this.selectedCategories = a;})
-      
-              
-
-
-
-
-     this.db.getCategories().pipe(map(arr => 
-          arr.filter( r =>  
-            //cauta in arrayul de obiecte categoryData categoriile din storageData care au fost selectate de user
-            //si salveaza-le datele intr-un nou observable
-            this.storageData.filter( o => (o.categoryId == r.categoryId)).length === 0 ))).subscribe(a => { 
-            console.log("save me lord", a); this.unselectedCategories = a;})
-        
-
-
-  }) */
   }
 
   loadSelectedCategories() {
@@ -82,74 +54,59 @@ export class TopicSelectPage implements OnInit {
 
   }
 
-  deselectCategory( cat:Category) {
 
-
-    var index = this.categories.indexOf(cat);
-    console.log("before deselect",this.categories, index)
-
-    if(index!==-1) {
-      this.categories.splice(index, 1); 
-      this.db.resetProgress(cat.categoryId)
-
-    }
-
-    for(let i=0;i<this.storageData.length;i++) {
-
-      if (this.storageData[i].categoryId == cat.categoryId)
+  async deselectCategory( cat:Category) {
+    const alert = await this.alertController.create({
+      header: 'Esti sigur?',
+      message: 'Daca renunti la cursurile categoriei ' + cat.name + ', vei pierde progresul facut pana acum!',
+      buttons: [
         {
-          this.storageData.splice(i, 1); 
-          this.storage.set('categories', this.storageData).then(() => {
-            this.storage.get('categories').then( c => { console.log(c)})
-          })
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: (blah) => {
+            //do nothing.
+          }
+        }, {
+          text: 'Renunta',
+          handler: () => {
 
-          
-         
+
+            var index = this.categories.indexOf(cat);
+            console.log("before deselect",this.categories, index)
+        
+            if(index!==-1) {
+              this.categories.splice(index, 1); 
+              this.db.resetProgress(cat.categoryId)
+        
+            }
+        
+            for(let i=0;i<this.storageData.length;i++) {
+        
+              if (this.storageData[i].categoryId == cat.categoryId)
+                {
+                  this.storageData.splice(i, 1); 
+                  this.storage.set('categories', this.storageData).then(() => {
+                    this.storage.get('categories').then( c => { console.log(c)})
+                  })
+        
+                  
+                 
+                }
+        
+            }
+        
+            console.log("deselectcategory",this.categories)
+          }
         }
+      ]
+    });
 
-    }
-
-    console.log("deselectcategory",this.categories)
+    await alert.present();
   }
-  
 
-/*
-  private topics;
-  public selectedTopics:string[];
-
-  constructor(private storage:Storage, private fireService:FireService, private modalCtrl:ModalController) { 
-
-    
-
-  }
-*/ 
   ngOnInit() {
-
-  
-/*
-    this.topics = this.fireService.getTopicsPrezentare();
-    this.storage.get('topics').then((p) => {     
-      this.selectedTopics = p;
-    }).then(() => {console.log(this.selectedTopics)})
- */
   }
  
-   /*
-  saveTopics() {
-
-    console.log("topicz saved")
-
-  }
-
-  async showModal(item:any) {
-    const modal = await this.modalCtrl.create({
-      component:TopicModalComponent,
-      componentProps: {
-        data: item,
-        topicsList:this.selectedTopics,
-        change:this.saveTopics.bind(this)
-      },
-    })
-    await modal.present();
-  */
+  
 }

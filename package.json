@@ -25,6 +25,7 @@
     "@capacitor/core": "1.0.0",
     "@ionic-native/core": "^5.0.0",
     "@ionic-native/local-notifications": "^5.10.0",
+    "@ionic-native/social-sharing": "^5.10.0",
     "@ionic-native/splash-screen": "^5.0.0",
     "@ionic-native/sqlite": "^5.10.0",
     "@ionic-native/sqlite-porter": "^5.10.0",
@@ -34,8 +35,10 @@
     "cordova-android": "8.0.0",
     "cordova-plugin-badge": "^0.8.8",
     "cordova-plugin-local-notification": "git+https://github.com/katzer/cordova-plugin-local-notifications.git",
+    "cordova-plugin-x-socialsharing": "^5.4.7",
     "cordova-sqlite-storage": "3.2.0",
     "core-js": "^2.5.4",
+    "es6-promise-plugin": "^4.2.2",
     "firebase": "^5.9.3",
     "rxjs": "~6.3.3",
     "uk.co.workingedge.cordova.plugin.sqliteporter": "^1.1.0",
@@ -83,7 +86,10 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {},
-      "cordova-plugin-local-notification": {}
+      "cordova-plugin-local-notification": {},
+      "cordova-plugin-x-socialsharing": {
+        "ANDROID_SUPPORT_V4_VERSION": "24.1.1+"
+      }
     },
     "platforms": [
       "android"

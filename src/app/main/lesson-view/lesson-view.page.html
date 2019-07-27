@@ -3,18 +3,7 @@
   
   <ion-toolbar color="primary">
 
-      <ion-buttons slot="primary">
-          <ion-button >
-            <ion-icon slot="icon-only" name="menu" size="small"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-        <ion-buttons slot="secondary">
-            <ion-button routerDirection="backward" routerLink="/main-tabs"   >
-              <ion-icon   slot="icon-only" name="home" size="small"></ion-icon>
-            </ion-button>
-          </ion-buttons>
-
-    <ion-title>o o o o o</ion-title>
+      <ion-back-button></ion-back-button>
   </ion-toolbar>
 </ion-header>
 <ion-content>
@@ -43,9 +32,9 @@
             </ion-buttons>
         Complete lesson!</ion-toolbar>
 
-    <ion-toolbar  (click)="setBookmark(lesson)" id="toolbar-share" >
+    <ion-toolbar  (click)="shareLesson(lesson)" id="toolbar-share" >
         <ion-buttons slot="secondary">
-            <ion-button>
+            <ion-button >
               <ion-icon slot="icon-only" name="share" style="color:white"></ion-icon>
             </ion-button>
           </ion-buttons>
