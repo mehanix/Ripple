@@ -6,6 +6,7 @@ import { DataService } from 'src/app/services/data.service';
 //import { DataService, LessonHeader } from 'src/app/services/data.service';
 import { Storage } from '@ionic/storage';
 import { ToastController } from '@ionic/angular';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 interface Segment {
 
@@ -25,7 +26,7 @@ export class LessonViewPage implements OnInit {
   segments:Segment[] = [];
   categoryData:CategoryData[] = [];
   isLessonComplete:number;
-  constructor(private data:DataService, private storage:Storage, private db:DatabaseService, public toastController: ToastController) {
+  constructor(private socialSharing: SocialSharing, private data:DataService, private storage:Storage, private db:DatabaseService, public toastController: ToastController) {
 
    // this.lesson = l.getLessonContent();
 
@@ -42,7 +43,7 @@ export class LessonViewPage implements OnInit {
       console.log("Lectie incarcata:", this.lesson);
       this.isLessonComplete = this.lesson.isComplete;
       console.table("isLessonComplete",this.isLessonComplete);
-    
+  
 
 
   }
@@ -125,6 +126,27 @@ export class LessonViewPage implements OnInit {
         }
 
     })
+  }
+
+
+ 
+
+
+  shareLesson(l:Lesson) {
+
+    var options = {
+      message: 'Hey! Azi am terminat lectia ' + l.headerTitle + ' si am aflat ceva ceea ce nu stiam!\n\n Iata un fragment din ea:\n\n' + l.paragraphs[0]+ '\n\n Descarca aplicatia Ripple ca sa afli si tu lucruri noi!', // not supported on some apps (Facebook, Instagram)
+      subject: 'Vrei sa inveti ceva nou?', // fi. for email
+      files: [l.img[0]], // an array of filenames either locally or remotely
+      url: 'https://github.com/mehanix/ripple/',
+      chooserTitle: 'Alege o aplicatie:' // Android only, you can override the default share sheet title,
+    };
+
+    
+
+
+    this.socialSharing.shareWithOptions(options).catch(err => console.log(err))
+
   }
 
   async presentToast(msg:string) {
