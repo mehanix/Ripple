@@ -63,7 +63,7 @@ export class BookmarksPage implements OnInit {
 
   startLesson(l:Lesson) {
     this.data.setLesson(l);
-    this.router.navigate(['/lesson-view'])
+    this.router.navigate(['/lesson-view/bookmark'])
 
   }
 

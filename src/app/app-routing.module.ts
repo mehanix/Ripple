@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'topics', loadChildren: './setup/topics/topics.module#TopicsPageModule' },
   { path: 'timeset', loadChildren: './setup/timeset/timeset.module#TimesetPageModule' },
   { path: 'lesson-select', loadChildren: './main/lesson-select/lesson-select.module#LessonSelectPageModule' },
-  { path: 'lesson-view', loadChildren: './main/lesson-view/lesson-view.module#LessonViewPageModule' },
+  { path: 'lesson-view/:mode', loadChildren: './main/lesson-view/lesson-view.module#LessonViewPageModule' },
   { path: 'topic-select', loadChildren: './main/topic-select/topic-select.module#TopicSelectPageModule' },
   { path: 'settings', loadChildren: './main/settings/settings.module#SettingsPageModule' },
   { path: 'about', loadChildren: './main/about/about.module#AboutPageModule' },
