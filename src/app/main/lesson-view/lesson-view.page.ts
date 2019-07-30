@@ -26,12 +26,20 @@ export class LessonViewPage implements OnInit {
   segments:Segment[] = [];
   categoryData:CategoryData[] = [];
   isLessonComplete:number;
-  constructor(private socialSharing: SocialSharing, private data:DataService, private storage:Storage, private db:DatabaseService, public toastController: ToastController) {
+  mode:string;
+  constructor(private route: ActivatedRoute, private socialSharing: SocialSharing, private data:DataService, private storage:Storage, private db:DatabaseService, public toastController: ToastController) {
 
    // this.lesson = l.getLessonContent();
 
     this.storage.get('categories').then(c => {this.categoryData = c})
     this.db.loadLessons()
+    this.route.params.subscribe( params => {
+        this.mode = params['mode'];
+        console.log("mode is", this.mode)
+    } )
+
+    //TODO: buttons depending on mode
+
     
   }
   ngOnInit() {

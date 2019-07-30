@@ -24,7 +24,7 @@
   </div>
 
   <div class="social">
-      <ion-toolbar (click)="completeLesson(lesson.categoryId)"  routerLink="/main-tabs"  id="toolbar-complete">
+      <ion-toolbar *ngIf="mode=='lesson'" (click)="completeLesson(lesson.categoryId)"  routerLink="/main-tabs"  id="toolbar-complete">
           <ion-buttons slot="secondary">
               <ion-button>
                 <ion-icon slot="icon-only" name="heart" style="color:white"></ion-icon>
@@ -40,7 +40,7 @@
           </ion-buttons>
       Share with your friends
     </ion-toolbar>
-    <ion-toolbar  (click)="setBookmark(lesson)" id="toolbar-bookmark">
+    <ion-toolbar  *ngIf="mode=='lesson'" (click)="setBookmark(lesson)" id="toolbar-bookmark">
         <ion-buttons slot="secondary">
             <ion-button>
               <ion-icon slot="icon-only" name="bookmark" style="color:white"></ion-icon>

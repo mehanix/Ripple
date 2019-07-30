@@ -10,7 +10,7 @@ import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 })
 export class TimesetPage implements OnInit {
 
-  private selectedTime:Date;
+  selectedTime:Date;
    hr:number;
   min:number;
 
