@@ -71,6 +71,7 @@ export class DatabaseService {
              this.seedDatabase();
              else
              {
+              this.loadLessons();
               this.loadCategories();
               this.dbReady.next(true)
              }
@@ -111,14 +112,17 @@ export class DatabaseService {
   loadLessons() {
     return this.database.executeSql('SELECT * FROM lessons', []).then(data => {
       let lessons: Lesson[] = [];
-      let paragraphs = [];
 
       console.log("Lessons loaded:")
       console.log(data);
       if (data.rows.length > 0) {
         for (var i=0; i< data.rows.length; i++) {
 
-          paragraphs = JSON.parse(data.rows.item(i).paragraphs)
+          let paragraphs = [];
+          let img=[];
+            //TODO: PARSE JSON
+              paragraphs = JSON.parse(data.rows.item(i).paragraphs)
+              img = JSON.parse(data.rows.item(i).img)
 
           lessons.push ({
             id:data.rows.item(i).id,
@@ -128,8 +132,8 @@ export class DatabaseService {
             headerDesc:data.rows.item(i).header_desc,
             headerImage:data.rows.item(i).header_img,
   
-            paragraphs: data.rows.item(i).paragraphs,
-            img: data.rows.item(i).img,
+            paragraphs: paragraphs,
+            img: img,
             lessonIndex:data.rows.item(i).lesson_index,
             isComplete:data.rows.item(i).is_complete
           })

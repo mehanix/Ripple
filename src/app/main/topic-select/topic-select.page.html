@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Topics</ion-title>
+    <ion-title>Subiecte</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,7 +8,7 @@
 
 <ion-list>
     <ion-list-header>
-      Selected Courses:
+      Subiecte selectate:
     </ion-list-header>
 
     <ion-item-sliding *ngFor="let item of categories" >
@@ -38,7 +38,7 @@
 
   <ion-list>
     <ion-list-header>
-      Available Courses:
+      Subiecte disponibile:
     </ion-list-header>
 
 
@@ -61,6 +61,19 @@
   
       </ion-item-sliding>
   </ion-list>
+  <ion-footer>
+      <ion-grid>
+          <ion-row justify-content-center class="ion-align-items-end" >
+            <ion-col>
+                <div style="text-align: center;">
+                <p style="color:#666666">Dă slide pe categorie pentru a accesa opțiunile ei.</p>
+              </div>
+
+            </ion-col>
+                       
+          </ion-row>
+        </ion-grid>
+  </ion-footer>
 </ion-content>
 
   <!--
