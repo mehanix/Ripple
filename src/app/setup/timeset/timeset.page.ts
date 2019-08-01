@@ -35,22 +35,30 @@ export class TimesetPage implements OnInit {
 
   }
 
-  finishSetup() {
+  finishSetup(setNotification:boolean) {
 
-    console.log(this.hr);
-    console.log(this.min);
-    this.localNotifications.schedule({
-      id: 42,
-      title: "Here's your lesson for the day!",
-      text: 'Ready to learn?',
-      trigger: { every: { hour: this.hr, minute: this.min } },
-      smallIcon: 'res://ic_stat_notify.png',
-      icon: 'res://icon.png',
-    });
-    console.log("bop")
+    if(setNotification==true) {
+
+      this.localNotifications.schedule({
+        id: 42,
+        title: "Here's your lesson for the day!",
+        text: 'Ready to learn?',
+        trigger: { every: { hour: this.hr, minute: this.min } },
+        smallIcon: 'res://ic_stat_notify.png',
+        icon: 'res://icon.png',
+      });
+
+    }
+    else 
+    {
+      this.localNotifications.clearAll();
+    }
+   
     this.storage.set('setupComplete', true);
 
   }
+
+
 
   }
 

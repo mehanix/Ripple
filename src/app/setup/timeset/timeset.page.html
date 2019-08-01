@@ -17,8 +17,11 @@
       </ion-col>
   </ion-row>
 
-  <ion-row>
-      <a href="https://www.google.com" class="link-text">Nu vreau sa fiu notificat</a>
+  <ion-row  align="center" class="ion-justify-content-center ion-align-items-center">
+
+            <a href="#" (click)="finishSetup(false)" routerLink="/main-tabs" class="link-text" >Nu vreau sa fiu notificat</a>
+  
+     
   </ion-row>
   
   <ion-row class="button-row ion-align-items-end" >
@@ -27,7 +30,7 @@
     <ion-col>
       
      
-        <ion-button expand="full" color="secondary" (click)="finishSetup()" routerLink="/main-tabs">Gata!</ion-button>
+        <ion-button expand="full" color="secondary" (click)="finishSetup(true)" routerLink="/main-tabs">Gata!</ion-button>
   
     </ion-col>
   </ion-row>
