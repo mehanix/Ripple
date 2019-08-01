@@ -43,7 +43,9 @@ export class TimesetPage implements OnInit {
       id: 42,
       title: "Here's your lesson for the day!",
       text: 'Ready to learn?',
-      trigger: { every: { hour: this.hr, minute: this.min } }
+      trigger: { every: { hour: this.hr, minute: this.min } },
+      smallIcon: 'res://ic_stat_notify.png',
+      icon: 'res://icon.png',
     });
     console.log("bop")
     this.storage.set('setupComplete', true);

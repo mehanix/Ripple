@@ -15,7 +15,7 @@ ion-content {
 }
 
 .card-row {
-    height:60%;
+    height:58%;
 }
 
 .button-row {
@@ -28,6 +28,9 @@ ion-card {
     height:100%;
 }
 
+.link-row {
+    height:2%;
+}
 .colorr {
     color:red;
 }
@@ -42,4 +45,8 @@ h1 {
     font-style: normal;
     font-weight: normal;
     src: url('../../../assets/fonts/Pacifico-Regular.ttf') format('ttf');
+  }
+
+  .link-text {
+      color: var(--ion-color-secondary)
   }
