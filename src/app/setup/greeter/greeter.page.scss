@@ -1,0 +1,72 @@
+ion-content {
+    --background: #263056 url('../../../assets/img/background-deco.png') no-repeat center top / contain;
+    --overflow: hidden;
+}
+
+.logo {
+
+    padding-top:20%;
+    padding-left:10%;
+    padding-right:10%;
+    align-content: center;
+    text-align: center;
+    color:white;
+    font-size: 35pt;
+    font-family: 'Pacifico';
+}
+
+.flavor-text {
+    height:60%;
+    text-align: justify;
+    color:white;
+    font-size: 15pt;
+    padding-top:10pt;
+    padding-left:3pt;
+    padding-right:3pt;
+
+  
+}
+
+.button-row {
+    height:20%;
+    padding-bottom:2%;
+}
+
+ion-slide {
+    height: 100vh;
+    flex-direction: column;
+}
+
+ion-img {
+    max-width: 50vw;
+    max-height: 50vh;
+    overflow: hidden;
+}
+
+
+.step-one {
+ 
+
+    background: var(--ion-color-light) url('../../../assets/img/background-deco.png') no-repeat center top / contain;
+    color: var(--ion-color-light-contrast);
+   
+}
+
+.step-two {
+    background: var(--ion-color-secondary-shade) url('../../../assets/img/background-deco.png') no-repeat center top / contain;
+    color: var(--ion-color-secondary-contrast);
+  
+}
+
+.step-three {
+
+    background: var(--ion-color-primary) url('../../../assets/img/background-deco.png') no-repeat center top / contain;
+    color: var(--ion-color-primary-contrast);
+
+    
+}
+
+ion-slide > p {
+    padding-left:5pt;
+    padding-right:5pt;
+}

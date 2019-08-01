@@ -14,7 +14,8 @@ const routes: Routes = [
   { path: 'about', loadChildren: './main/about/about.module#AboutPageModule' },
   { path: 'main-tabs', loadChildren: './main/main-tabs/main-tabs.module#MainTabsPageModule' },
   { path: 'bookmarks', loadChildren: './main/bookmarks/bookmarks.module#BookmarksPageModule' },
-  { path: 'lessons-listall', loadChildren: './main/lessons-listall/lessons-listall.module#LessonsListallPageModule' },
+  { path: 'lessons-listall', loadChildren: './main/lessons-listall/lessons-listall.module#LessonsListallPageModule' },  { path: 'greeter', loadChildren: './setup/greeter/greeter.module#GreeterPageModule' },
+
 
 
 
