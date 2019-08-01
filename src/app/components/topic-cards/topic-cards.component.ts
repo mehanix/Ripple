@@ -55,35 +55,39 @@ export class TopicCardsComponent implements OnInit {
     console.log("click clack")
     var obj = <CategoryData>{categoryId:categoryId, progress:0, lessonCount:lessonCount}
     
-    console.log("clack clock",obj)
+    console.log("clack clock",this.categories.length)
 
+    let index = -1;
+    for(let i=0;i<this.selectedCategories.length && index==-1;i++) 
+      if (this.selectedCategories[i].categoryId == categoryId) 
+        index=i;
+    
 
-    var index = this.selectedCategories.indexOf(obj);
-    if (index === -1)  {
-
+    if(index==-1) {
+    
       //adauga id categorie in array
       this.selectedCategories.push(obj);
 
-      //update aspect buton
-      button.children.item(0).setAttribute("name","heart");
-       
+     //update aspect buton
+     button.children.item(0).setAttribute("name","heart");
+    }
+    else
+      {
+   // sterge textul, mark as unselected
+     this.selectedCategories.splice(index, 1);
 
-    } 
-    else {
-      // sterge textul, mark as unselected
-      this.selectedCategories.splice(index, 1);
+     button.children.item(0).setAttribute("name","heart-empty");
+      }
 
-      button.children.item(0).setAttribute("name","heart-empty");
-
-    } 
-    console.log(this.selectedCategories);
+    }
+      
   
   }
   
 
 
 
-  }
+  
   
 
 

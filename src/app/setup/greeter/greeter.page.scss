@@ -3,17 +3,6 @@ ion-content {
     --overflow: hidden;
 }
 
-.logo {
-
-    padding-top:20%;
-    padding-left:10%;
-    padding-right:10%;
-    align-content: center;
-    text-align: center;
-    color:white;
-    font-size: 35pt;
-    font-family: 'Pacifico';
-}
 
 .flavor-text {
     height:60%;
@@ -21,8 +10,8 @@ ion-content {
     color:white;
     font-size: 15pt;
     padding-top:10pt;
-    padding-left:3pt;
-    padding-right:3pt;
+    padding-left:10pt;
+    padding-right:10pt;
 
   
 }
@@ -67,6 +56,10 @@ ion-img {
 }
 
 ion-slide > p {
-    padding-left:5pt;
-    padding-right:5pt;
+    padding-left:10pt;
+    padding-right:10pt;
+}
+
+ion-slide > ion-icon {
+    font-size:110pt
 }
