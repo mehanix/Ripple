@@ -3,7 +3,7 @@
     <name>Ripple</name>
     <description>Aplicatie care te ajuta sa descoperi lucruri noi in fiecare zi!</description>
     <author email="ciausu00nicoleta@gmail.com" href="http://ionicframework.com/">Nicoleta Ciausu (mehanix)</author>
-    <content original-src="index.html" src="https://localhost:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
