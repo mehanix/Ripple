@@ -1,5 +1,4 @@
 <ion-content>
-
   <ion-row class="logo justify-content-center align-items-center" align="center" style="height:30%">
     <ion-col>
       <h1>Super!</h1>
@@ -14,13 +13,20 @@
         <ion-label>Alege ora:</ion-label>
         <ion-datetime color="secondary" placeholder="Tap here" [(ngModel)]="selectedTime" (ionChange)="saveTime()" displayFormat="HH:mm" ></ion-datetime>
       </ion-item>
-
+     
       </ion-col>
+  </ion-row>
+
+  <ion-row>
+      <a href="https://www.google.com" class="link-text">Nu vreau sa fiu notificat</a>
   </ion-row>
   
   <ion-row class="button-row ion-align-items-end" >
+
+   
     <ion-col>
-  
+      
+     
         <ion-button expand="full" color="secondary" (click)="finishSetup()" routerLink="/main-tabs">Gata!</ion-button>
   
     </ion-col>

@@ -13,7 +13,7 @@ INSERT OR IGNORE INTO 'categories' (id,name,img,descr,lesson_count, progress) VA
   'Geografie',
    "https://www.worldatlas.com/r/w728-h425-c728x425/upload/83/db/8f/geography.jpg",
   'Invata despre continente, relief si capitalele lumii!',
-  '5',
+  '4',
    null
 );
 INSERT OR IGNORE INTO 'categories' (id,name,img,descr,lesson_count,progress) VALUES (
@@ -49,7 +49,22 @@ INSERT OR IGNORE INTO 'categories' (id,name,img,descr,lesson_count,progress) VAL
   null
 );
 
-
+INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id,paragraphs,img,index_lesson,is_complete) VALUES (
+  'Cele mai mari fluvii ale lumii',
+  'Fluviile au avut un rol esential de-a lungul omenirii, devenind leagane ale civilizatiei. Afla astazi detalii geografice despre cele mai importante fluvii ale lumii!',
+  'https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_350,q_50,w_623/v1/clients/spokane17/Spokane_River_Islands_Trailhead_87183f8f-3d7c-4294-82c5-260286dd6b08.png',
+  '1',
+  '["Apa acoperă trei sferturi din suprafaţa Pământului, dar aproape toată este sărată sau congelată pentru totdeauna. Aproximativ 70 la suta din apă dulce se află în stare de gheaţă în Antarctica. Aproximativ 85000 de kilometri cubi de apă se varsă în lacuri şi râuri ale planetei care, în mod constant, sunt sub influenţa omului. Probabil, până în 2025, 52 de ţări - două treimi din populaţia lumii - se vor confrunta cu o penuria apei potabile.",
+    "Fluviul Amazon, bazinul căruia este comparabil cu partea continentală a Statelor Unite este o zonă cu o diversitate biologică uimitoare. Acolo se întind aproximativ 60 la sută din pădurile tropicale ale lumii, şi regiunea în cauză joacă un rol important în reglarea climatului Americii de Sud şi de Nord. Se estimează că lungimea râului constituie 6400 km. Locul de amplasare într-un colţ îndepărtat al lumii o lungă perioadă de timp a apărat fluviul de influenţa umană, dar situaţia se schimbă rapid. Numai în Amazonul Brazilian se planifică construirea a 60 de baraje. Astfel de proiecte pot afecta populaţia locală şi inunda parcurile naţionale.",
+    "Fluviul Dunărea provine din Germania de Vest şi peste 2800 km se varsă în Marea Neagră. Dunărea traversează teritoriul astfel de ţări precum sunt Austria, Ungaria, Croaţia, Serbia, România şi Ucraina. Dunărea îşi duce apele sale prin teritoriul a 19 ţări, ceea ce face acest râu cel mai internaţional din lume. Fluviul este caracterizat de o varietate de sisteme biologice şi ecologice, care sunt, în mod activ, abuzate de omenire de-a lungul ultimilor 150 de ani. Datorită terasamentelor, digurilor şi dragării, 80 la sută din zonele umede ale râului sunt distruse. Astfel de organizaţii cum ar fi World Wildlife Federation lucrează pentru restaurarea şi conservarea acestor zone.",
+    "Fluviului Mekong, prezentat aici în Thailanda, este o parte integrantă a ecosistemului din Asia de Sud-Est. El provine din China şi poartă apele sale la o distanta de 4900 km, prin Birmania, Laos, Thailanda, Cambodgia şi Vietnam. Râului susţine a doua varietate de pescuit din lume şi oferă pentru mai mult de 60 de milioane de oameni alimente, apă şi mijloace de transport. Construirea unui număr de baraje de-a lungul râului Mekong în China are un impact negativ asupra ecosistemelor ulterioare de mai jos. Organizaţiile, cum ar fi coaliţia Salvaţi Mekong, luptă împotriva construirii acestor baraje, lucrând, în acelaşi timp, întru păstrarea integrităţii ecologice a râului.",
+    "Râul Yangtze curge aproximativ 6400 km în China, fiind cel mai lung din ţară şi al treilea după lungime din lume. Este o sursă imensă de energie hidroelectrică, şi pe teritoriul său funcţionează un baraj cu o faimă rea „Trei Defileuri”. Construcţia a început în 1992, ca urmare au fost strămutate mai mult de 1,2 milioane de oameni şi inundate sute de mine, fabrici şi depozite de deşeuri. Aceste poluări masive şi umplerea râului cu gunoi au provocat mai multe alunecări de teren care ameninţă cea mai mare gospodărie piscicolă din China. În 2011, guvernul chinez a recunoscut oficial problema.",
+    "Fluviul african Nil este cel mai lung din lume, lungimea lui constituie mai mult de 6500 de kilometri. Acesta curge prin Africa de nord-est, finisându-se în Egipt şi Marea Mediterană. În Uganda, Etiopia şi Sudan se planifică construcţia mai multor baraje mari. Organizarea Bazinului Nilului lucrează pentru a asigura utilizarea raţională durabilă a resurselor râului.",
+    "Afla mai multe despre fluvii aici: http://ecology.md/md/page/opt-cei-mai-mari-fluvii-ale-lumii"]',
+  '["http://ecology.md/pics/2012/03/ecoset_8_velichaishih_rek_mira_011.jpg","http://s2.ziareromania.ro/?mmid=905c526316d205a898","http://ecology.md/pics/2012/03/ecoset_8_velichaishih_rek_mira_041.jpg","http://ecology.md/pics/2012/03/ecoset_8_velichaishih_rek_mira_051.jpg","http://ecology.md/pics/2012/03/ecoset_8_velichaishih_rek_mira_061.jpg"]',
+  '5',
+  '0'
+);
 
 
 
@@ -259,3 +274,99 @@ INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id
   '0'
 );
 
+
+INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id,paragraphs,img,index_lesson,is_complete) VALUES (
+  'Cum se formeaza o galaxie?',
+  'Universul este compus din nenumarate galaxii, cu forme diferite, si aflate la mii de ani lumina distanta fata de galaxia noastra (Calea Lactee). Afla astazi cum se formeaza ele!',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/M101_hires_STScI-PRC2006-10a.jpg/440px-M101_hires_STScI-PRC2006-10a.jpg',
+  '3',
+  '["Cand privim in sus pe cerul noptii, mai ales in timpul verii, putem vedea o banda de lumina formata din stele mai mult sau mai putin luminoase. Aceasta banda de lumina este galaxia noastra, Calea Lactee. Soarele nostru este doar una din cele aproximativ 200 de miliarde de stele din Calea Lactee, care la randul ei este doar una din miliardele de galaxii din univers. O galaxie este un sistem urias de stele, gaz (in special hidrogen), praf si materie neagra, care orbiteaza in jurul unui centru comun si sunt tinute impreuna de catre gravitatie. Galaxiile pot fi gasite in multe forme si dimensiuni. Stim ca galaxiile sunt foarte batrane si ca s-au format la inceputul evolutiei universului. Totusi, formarea unei galaxii si evolutia galaxiilor in forme atat de diferite au ramas un mister.",
+    "Nu prea stim exact cum s-au format galaxiile si cum au ajuns sa aiba formele pe care le au astazi, insa exista cateva teorii legate de originile si evolutia lor. La scurt timp dupa Big Bang, acum 14 miliarde de ani, prabusirea norilor de gaze si praf ar fi putut duce la formarea galaxiilor. Interactiunile dintre galaxii, in special coliziunile, joaca un rol important in evolutia lor. Sa ne uitam putin la perioada de formare a galaxiilor.",
+    "Observatiile lui Edwin Hubble, si ulterior legea lui Hubble, au condus la ideea ca universul se extinde. Putem estima varsta universului bazandu-ne pe rata de expansiune. Deoarece unele galaxii se afla la miliarde de ani lumina distanta de noi, putem discerne ca ele s-au format destul de curand dupa Big Bang (cu cat te uiti mai adanc in spatiu, cu atat poti privi mai departe in timp). Cele mai multe teorii despre universul timpuriu fac doua presupuneri, si anume: 1. Acesta era umplut cu hidrogen si heliu. 2. Unele zone erau ceva mai dense decat altele.",
+    "Bazandu-se pe aceste doua ipoteze, astronomii cred ca zonele mai dense au incetinit usor expansiunea, permitand gazului sa se acumuleze in mici nori protogalactici. In acesti nori, gravitatia a facut ca praful si gazul sa se prabuseasca si sa formeze stele. Aceste stele au ars repede si au devenit clustere globulare, insa gravitatia a continuat sa prabuseasca norii. Pe masura ce norii s-au prabusit, acestia au format discuri rotative. Aceste discuri rotative au atras si mai mult gaz si praf cu ajutorul gravitatiei si au format discuri galactice. Inauntrul discurilor galactice s-au format noi stele. Ceea ce a ramas la periferia norului original au fost clusterele globulare si nimbul compus din gaz, praf si materie neagra.",
+    "Oamenii de stiinta estimeaza ca aproximativ jumatate din galaxiile existente in univers au fost implicate intr-un fel de coliziune. Interactiunile gravitationale dintre galaxiile care se ciocnesc pot provoca mai multe lucruri: noi valuri de formare a stelelor, supernove, prabusirea stelelor care formeaza gauri negre sau gauri negre supermasive in centrul galaxiilor active. La fel ca si in cazul altor obiecte din univers, oamenii de stiinta mai au multe de aflat si descifrat cand vine vorba de galaxii.",
+    "Afla mai multe despre formarea galaxiilor aici: https://destepti.ro/formarea-unei-galaxii"]',
+  '["https://in-the-sky.org/image.php?style=hugeicon&img=imagedump/milkyWay/milkyWay_sydney.jpg","https://cdn.theatlantic.com/assets/media/img/mt/2017/06/hubble_spies_big_bang_frontiers_22202541749_o_orig/lead_720_405.jpg?mod=1533691891","","https://image2.slideserve.com/4801631/tipuri-de-galaxii-l.jpg"]',
+  '5',
+  '0'
+);
+
+INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id,paragraphs,img,index_lesson,is_complete) VALUES (
+  'Waterloo: ultima bătălie a lui Napoleon',
+  'Napoleon Bonaparte a fost cel mai important general francez si a dus o viata agitata, conducand Franta spre a isi crea un imperiu. Afla astazi cum a decurs ultima batalie a sa!',
+  'https://images.immediate.co.uk/production/volatile/sites/7/2018/01/French-at-Waterloo-5a34500.jpg?quality=90&resize=620,413',
+  '4',
+  '["Politica externă a lui Napoleon a fost un șir aproape neîntrerupt de războaie pentru hegemonie în Europa și pentru dominație în colonii, împotriva coalițiilor inițiate, organizate și finanțate de Marea Britanie. După o serie de victorii, ce a debutat în 1805, cu cele de la Ulm și Austerlitz, Napoleon s-a implicat în două campanii dezastruoase, cea din Spania, din 1808, și cea din Rusia, din 1812. Aceste insuccese au condus la formarea unei noi coaliții europene, în aprilie 1814, Parisul fiind cucerit, iar Napoleon a fost deportat pe insula Elba.",
+    "Napoleon s-a reîntors în Franța la 1 martie 1815, cu o armată de 1.100 de soldați. La 20 martie 1815, Napoleon a ocupat din nou tronul, moment în care a început perioada cunoscută sub numele de Cele 100 de zile, reprezentând perioada dintre revenirea lui Napoleon Bonaparte la Paris și urcarea pe tron a lui Ludovic al XVIII-lea, la 8 iulie 1815 (revenirea Casei de Bourbon pe tronul Franței, a doua Restaurație). ",
+    "La 18 iunie, în localitatea Waterloo din apropierea orașului Bruxelles, armata lui Napoleon, însumând 72.000 de militari, a întâlnit armata britanică condusă de ducele de Wellington, care avea 68.000 de soldați. Patru atacuri succesive ale francezilor asupra forțelor aliate s-au soldat cu eșecuri;drept urmare, Napoleon a fost nevoit să-și disloce trupele în calea flancului prusac de atac, după cum arată volumul amintit mai sus.",
+    "Pierderile francezilor s-au ridicat la 25.000 de soldați, iar cele ale armatelor lui Wellington și Blucher la 15.000, respectiv 8.000 de soldați. Napoleon s-a reîntors la Paris și la 22 iunie a abdicat în favoarea fiului său. La 15 iulie s-a pus sub protecția trupelor britanice la Rochefort, sperând că va fi lăsat să plece în Statele Unite. Britanicii însă l-au închis pe insula Sfânta Elena, unde a murit, la 5 mai 1821.",
+    "Afla mai multe aici: https://www.historia.ro/sectiune/general/articol/waterloo-ultima-batalie-a-lui-napoleon"]',
+  '["https://storage0.dms.mpinteractiv.ro/media/401/321/5109/17268997/1/david-napoleon.jpg?width=618","","https://www.researchgate.net/profile/Lauriks_Leen/publication/258717263/figure/fig3/AS:392779084648453@1470657239359/Map-of-Belgium-with-places-and-rivers-mentioned-in-glass-production-history_Q640.jpg", "https://cdn.historia.ro/img/articles/covers/38162-l.jpg?1562813123"]',
+  '2',
+  '0'
+);
+
+
+INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id,paragraphs,img,index_lesson,is_complete) VALUES (
+  'Unificarea Germaniei: Razboiul franco-prusac',
+  'Stiai ca Germania s-a unificat in urma razboiului franco-prusac, prin tratatul de la Frankfurt? Afla astazi ce s-a intamplat intr-unul dintre razboaiele cu sfarsitul cel mai neasteptat!',
+  'https://upload.wikimedia.org/wikipedia/commons/b/bd/Lignedefeu16August.jpg',
+  '4',
+  '["Razboiul franco-prusac sau Razboiul franco-german, de multe ori numit in Franta Razboiul din 1870 (19 iulie 1870-10 mai 1871) a fost un conflict dintre Franta si Prusia, care a fost sprijinita de Confederatia Germana de Nord si statele sud-germane Baden, Württemberg si Bavaria. Impunatoarea victorie germana a dus la actul final de unificare a Germaniei si la formarea Imperiului German sub Kaiserul Wilhelm I de Prusia. A reprezentat de asemenea sfarsitul domniei lui Napoleon al III-lea si a celui de Al doilea Imperiu Francez, care a fost inlocuit de cea de a Treia Republica Franceza. In cadrul reparatiilor de razboi, Franta a cedat Alsacia-Lorena, provincii pe care Imperiul German le va detine pana la sfarsitul Primului Razboi Mondial.",
+    "Telegrama de la Ems a constituit pretextul declansarii razboiului franco-prusac din anii 1870-1871. Din cauza nereusitei politicii lui Napoleon al II-lea din ultimii ani, o parte din clasa conducatoare franceza era nemultumita de politica imparatului. Curentul republican se intareste si in fruntea lui sta stralucitul orator Léon Gambetta.",
+    "Napoleon al III-lea a luat o serie de masuri represive, dar vazand ca acestea nu stapanesc curentul republican, a gasit solutia nefericita de a se angaja intr-un razboi impotriva Prusiei, cu convingerea ca, impiedicand unirea Germaniei sub conducerea Prusiei, patura conducatoare din Franta se va strange in jurul lui.",
+    "In ziua de 19 iulie 1870 Franta declara razboi Prusiei. Napoleon al III-lea a inceput razboiul desi Franta nu era pregatita. Armata nu avea nici o conducere priceputa si nici cele necesare ducerii unui razboi. Lipseau pana si hartile. Prusia era mult mai bine pregatita si numarul soldatilor prusaci era aproape dublu. Cu toata barbatia soldatului francez, armata franceza a suferit de la inceput infrangeri una dupa alta. La Metz si Sedan armatele franceze au fost inconjurate de prusaci. Desi un general francez i-a propus lui Napoleon sa-si croiasca drum prin lupta spre liniile franceze sau sa piara pe campul de onoare, imparatul s-a predat impreuna cu intreaga armata.",
+    "Afla mai multe aici: https://cultural.bzi.ro/razboiul-franco-prusac-25088"]',
+  '["","https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/FrancoPrussianWarFrontierJuly1870.jpg/800px-FrancoPrussianWarFrontierJuly1870.jpg",""]',
+  '3',
+  '0'
+);
+
+
+INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id,paragraphs,img,index_lesson,is_complete) VALUES (
+  'Asediul și Căderea Constantinopolului',
+  'Capitala Imperiului Bizantin, cucerita de otomani? Acest eveniment istoric marcheaza sfarsitul atat al Imperiului Bizantin, cat si al Evului Mediu.',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Siege_of_a_city%2C_medieval_miniature.jpg/800px-Siege_of_a_city%2C_medieval_miniature.jpg',
+  '4',
+  '["Căderea Constantinopolului este numele sub care e cunoscută cucerirea capitalei Imperiului Bizantin de forțele Imperiului Otoman, sub comanda sultanului Mehmed al II-lea (1432-1481). Evenimentul a avut loc în ziua de marți, 29 mai 1453.",
+    "Căderea Constantinopolului a însemnat nu numai sfârșitul Imperiului Roman de Răsărit și moartea ultimului împărat bizantin, Constantin al XI-lea (1404-1453), dar și o victorie strategică de o importanță crucială pentru cucerirea estului mediteranean și al Balcanilor de către otomani. Constantinopolul a rămas capitala Imperiului Otoman până la destrămarea acestuia în 1922. În anul 1930, după proclamarea Republicii Turcia, orașul a fost redenumit în Istanbul.",
+    "În cei aproximativ 1 000 de ani de existență a Imperiului Bizantin, Constantinopolul a fost asediat de mai multe ori; a fost cucerit doar de două ori, prima dată în timpul Cruciadei a patra din 1204, iar a doua oară când a fost recuperat de bizantini, câteva decenii mai târziu, în 1261. În următoarele două secole, Imperiul Bizantin a fost măcinat și cucerit de un nou inamic, Imperiul Otoman. În 1453, „imperiul” era format doar din orașul în sine și o porțiune a Peloponezului din jurul cetății Mystras; Imperiul din Trapezunt, un stat succesor complet independent, format ca urmare a celei de-a patra Cruciade, a supraviețuit pe coasta Mării Negre.",
+    "În 22 mai 1453, luna, simbol al Constantinopolului, s-a întunecat în eclipsă, confirmând o profeție despre sfârșitul orașului. Patru zile mai târziu, întreg orașul a fost acoperit de o ceață deasă, o condiție nemaiauzită în acele părți în luna mai. După ce s-a ridicat ceața, în seara aceea “flăcări au învăluit domul bisericii Hagia Sophia, iar lumini puteau fi văzute și de pe ziduri, strălucind în depărtare, în spatele taberei turcești (înspre vest)”. Unii au interpretat asta ca fiind Duhul Sfânt părăsind catedrala. Aceste fenomene au fost însă efectele locale ale catastroficei erupții vulcanice de la Kuwae din Oceanul Pacific. “Focul” văzut a fost o iluzie optică datorată reflecției unui apus de soare roșu intens de norii din cenușă vulcanică, aflați sus în atmosferă.",
+    "Istoricii consideră căderea Constantinopolului ca fiind evenimentul care a încheiat Evul Mediu și a început Renașterea datorită sfârșitului vechii ierarhii religioase din Europa, precum și folosirea tunurilor și a prafului de pușcă. De asemenea, căderea Constantinopolului a tăiat principala legătură comercială pe uscat dintre Europa și Asia. În consecință, un număr tot mai mare de europeni a început să plănuiască din ce în ce mai serios posibilitatea atingerii Asiei pe mare — ceea ce a dus la descoperirea Lumii Noi.",
+    "Afla mai multe aici: https://www.unitischimbam.ro/caderea-constantinopolului-29-mai-1453/"]',
+  '["https://www.unitischimbam.ro/wp-content/uploads/2018/05/Imperiile-Otoman---i-Bizantin.png","https://www.unitischimbam.ro/wp-content/uploads/2018/05/Otomanii-asediind-Constantinopolul.jpg","https://www.unitischimbam.ro/wp-content/uploads/2018/05/Otomanii-pe-malul-Bosforului.jpg"]',
+  '1',
+  '0'
+);
+
+INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id,paragraphs,img,index_lesson,is_complete) VALUES (
+  'Primul razboi al Opiului in China',
+  'Stiai ca au existat razboaie cauzate de dependenta de opiu, substanta des consumata in China acelei perioade? Afla astazi cum s-a ajuns la razboaie si ce consecinte au avut acestea asupra lumii!',
+  'https://storage0.dms.mpinteractiv.ro/media/401/321/5106/13061634/1/maci-cover.jpg?width=618&height=361',
+  '4',
+  '["În decursul secolului al XVI-lea puterile coloniale europene precum Anglia, Olanda şi Franţa încercau deja să-şi lege rutele comerciale din Asia de Imperiul Qing din China, cea mai mare piaţă de desfacere şi sursă de materii prime din acele vremuri. Conflictul dintre civilizaţii şi interese avea să ducă în mod inevitabil la izbucnirea unor războaie. Este vorba de faşa numitele Războaie ale Opiului, apărute şi ca un rezultat direct al politicii de autoizolare a Chinei, coroborată cu respingerea virulentă a oricărei forme de comerţ cu Occidentul. Soldate cu mii de morţi, aceste confruntări aveau să afecteze iremediabil pentru mulţi ani relaţiile Chinei cu puterile occidentale.",
+    "Anglia s-a văzut într-o situaţie de impas în comerţul pe care încerca să-l stabilească cu China, cum nu mai avea rezerve autohtone de argint (acesta fiind singurul lucru acceptat de chinezi in schimburile lor) şi era nevoită să-şi cumpere argintul din Mexic sau de la rivalele sale europene care aveau mine de argint în colonii. Creşterea apetitului britanicilor pentru ceai se reflecta în creşterea cererii pentru acest produs. Spre sfârşitul secolului al XVIII-lea, Anglia importa şase tone de ceai anual din China. În decursul unui interval de 50 de ani Anglia vindea în China bunuri în valoare de 9 milioane de lire şi importa produse chinezeşti în valoare de 27 milioane de lire, restul costurilor fiind plătite în argint.",
+    "Milioane de oameni erau deja dependenţi de consumul de opiu, iar cum consumul şi dependenţa mergeau mână în mână, autorităţile dinastiei Qing erau din ce în ce mai îngrijorate de acest obicei nociv care ameninţa însăşi sănătatea populaţiei şi funcţionarea societăţii. Conform unor estimări istorice, în jurul anului 1830, un procent uluitor de 90% dintre tinerii bărbaţi chinezi de pe coasta de est a Chinei erau dependenţi de consumul de opiu. Balanţa comerţului se înclinase brusc în favoarea Angliei.",
+    "Aşa că în anul 1839, sătul de situaţia creată, împăratul Chinei a decis să interzică prezenţa oricărui englez care vindea opiu. În această direcţie, împăratul l-a numit nou guvernator al Cantonului pe funcţionarul imperial Lin Zexu, care a asediat un număr de 13 negustori englezi de opiu care se refugiaseră în casele lor din port. Când aceştia s-au predat în cele din urmă în luna aprilie a aceluiaşi an, guvernatuorul Lina confiscat din casele lor peste 42.000 de pipe pentru fumat opiu, alături de o cantitate de opiu în valoare de 2 milioane de lire sterline la valoarea pieţii din acele timpuri. Guvernatorul a ordonat confiscarea opiului şi aruncarea acestuia în apele mării. Scandalizaţi, speculanţii englezi au trimis o petiţie la Londra în care cereau imperativ intervenţia oficialităţilor şi a casei regale.",
+    "Primul razboi al opiului s-a soldat cu o serie lungă de înfrângeri dezastruoase suferite de forţele chineze, care din cauza diferenţei de armament au fost înfrânte în multe bătălii desfăşurate atât pe mare, cât şi pe uscat. În decursul următorilor doi ani şi jumătate, britanicii au capturat Cantonul, Zhousanul şi forturile Ningbo şi Dinghai de la gurile fluviului Pearl. În anul 1842, britanicii au reuşit să cucerească şi oraşul Shanghai, ajungând astfel să controleze gura de vărsare a marelui fluviu Yangtze. Uluiţi şi umiliţi în egală măsură de desfăşurarea lucrurilor, oficialii chinezi s-au văzut nevoiţi să ceară încheierea unei păci deloc favorabile lor.",
+    "Afla mai multe despre aceste razboaie aici: https://www.descopera.ro/cultura/13061634-razboaiele-opiului-din-china-primele-razboaie-mondiale-ale-drogurilor"]',
+  '["http://www.historiensverden.dk/billeder/uploads/1308","","https://supchina.com/wp-content/uploads/2018/04/Opium-War-cartoon.jpg"]',
+  '4',
+  '0'
+);
+
+INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id,paragraphs,img,index_lesson,is_complete) VALUES (
+  'Babylon si codul lui Hammurabi',
+  'Codul lui Hammurabi a fost primul set de reguli, legi, care includea prezumptia de nevinovatie pana la proba contrarie. Afla mai multe despre acesta, si despre civilizatia babiloniana, astazi!',
+  'https://www.realmofhistory.com/wp-content/uploads/2019/03/babylon-history-reconstruction_1-min-770x437.jpg',
+  '1',
+  '["Pe malul Eufratului îşi poartă istoria pe umeri unul dintre cele mai frumoase şi faimoase oraşe ale lumii antice:Babilonul. Centru al artei şi culturii, oraş protejat de Alexandru cel Mare, Babilonul era denumit în Scripturi Stăpâna Regatelor. Babilonul, unul dintre cele mai faimoase oraşe ale civilizaţiei antice, a fost capitala Babiloniei, localizată în sudul Mesopotamiei, ceea ce înseamă astăzi 60 de mile distanţă de Baghdad, Irak.",
+    "Se ştiu foarte puţine lucruri despre originea Babilonului, dar cronicile antice sugerează că oraşul datează de acum 4000 de ani, şi era considerat un centru administrativ. Apoi, în 1894 î.Hr. oraşul a fost cucerit de către Samuabun, un lider local din ţinutul a ceea ce numim astăzi Siria, şi l-a transformat într-un mic regat. Soarta oraşului s-a schimbat radical odată cu venirea pe tron a celui de-al VI-lea rege, Hammurabi, în 1792 î.Hr.",
+    "În timpul domniei sale, 1792-1750 î.Hr., Hammurabi şi-a extins teritoriul de-a lungul Eufratului, anexând mai multe vechi centre urbane, precum Ur, Uruk, Isin şi Larsa. Conducător al unui înfloritor imperiu, Hammurabi era văzut ca un zeu, şi astfel a înfiinţat noi reguli pentru poporul său. Codul lui Hammurabi, care datează din 1754 î.Hr. conţinea 282 de legi. Gravat pe o bucată de 4 tone de piatră, care acum este expusă la Muzeul Luvru din Paris, codul prezenta numeroase pedepse aspre în cazul în care legile sunt încălcate, pedepse care includeau tăierea anumitor părţi ale corpului precum limba, mâinile, sânii sau urechile. Codul lui Hammurabi este considerat ca fiind primul exemplu al prezumţiei de nevinovăţie până la proba contrarie. Justiţia era determinată de cele trei clase sociale ale Babilonului:oamenii cu proprietăţi, cei liberi şi sclavii. De exemplu, dacă un doctor omora un pacient bogat, drept pedeapsă i se tăiau mâinile, dar dacă pacientul era un sclav, o compensaţie financiară era suficientă.",
+    "Babilonul este recunoscut şi pentru Grădinile Suspendate, una dintre Şapte Minuni ale lumii antice. Se pare că ele au fost construite de către regeleNebuchadnezzar pentru soţia sa, Amyitis, care ducea dorul tărâmurilor natale. Locaţia grădinilor nu a fost niciodată cunoscută, cu toate acestea cercetările continua, deşi precum Turnul Babel, şi Grădinile Suspendate sunt considerate un mit.",
+    "Babilonul a fost cucerit de către persani în 539 î.Hr., şi cu toate acestea a continuat să fie un centru al artei şi educaţiei. Oraşul a fost unul dintre preferatele lui Alexandru Macedon, însă după moartea sa oraşul a devenit o ruină. În 1980, o parte a Babilonului a fost reconstruită de către liderul irakian Saddam Hussein, aşa că doar puţin din vechiul oraş mai este vizibil astăzi.",
+    "Afla mai multe despre Babylon aici: https://www.historia.ro/sectiune/general/articol/ce-nu-stiati-despre-babilon"]',
+  '["https://www.realmofhistory.com/wp-content/uploads/2019/03/babylon-history-reconstruction_1-min-770x437.jpg","","http://avasdr.ro/images/blog-avamr/hammurabi0.jpg","http://cele7minunialelumiiantice.weebly.com/uploads/1/5/4/4/15446334/973183580.jpg","","https://img-aws.ehowcdn.com/560x560p/s3-us-west-1.amazonaws.com/contentlab.studiod/getty/c8837aeb9cf542bdabb82d105f5eb440"]',
+  '5',
+  '0'
+);
