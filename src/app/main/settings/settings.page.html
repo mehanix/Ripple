@@ -7,8 +7,12 @@
 <ion-content>
 
     <ion-list>
-        <ion-item>
-            <ion-label>Schimba ora notificarii</ion-label> <!-- TODO: implement -->
+      <ion-item style="padding:5px">
+        <ion-label>Alege alta ora pentru notificare: </ion-label>
+        <ion-datetime color="secondary" placeholder="Tap here" [(ngModel)]="selectedTime" (ionChange)="saveTime()" displayFormat="HH:mm" ></ion-datetime>
+      </ion-item>
+        <ion-item (click)="removeNotification()">
+          <ion-label>Dezactiveaza notificarea</ion-label>
         </ion-item>
         <ion-item routerLink="/lessons-listall">
           <ion-label>Vezi toate lectiile</ion-label> <!-- TODO: implement -->
