@@ -4,7 +4,7 @@ import { Storage } from '@ionic/storage';
 import { ModalController, AlertController } from '@ionic/angular';
 import { TopicModalComponent } from 'src/app/components/topic-modal/topic-modal.component';
 import { Observable, BehaviorSubject } from 'rxjs';
-import { Category, DatabaseService, CategoryData } from 'src/app/services/database.service';
+import { Category, DatabaseService, CategoryData, Lesson } from 'src/app/services/database.service';
 import { filter, map } from 'rxjs/operators';
 
 interface ICategoryCard extends Category {
@@ -25,7 +25,7 @@ export class TopicSelectPage implements OnInit {
   storageData: CategoryData[]; //array din localStorage cu categoriile alese de user
 
   categories: Category[] = []
-  constructor(private db:DatabaseService, private storage:Storage, public alertController: AlertController) {
+  constructor(public modalController: ModalController, private db:DatabaseService, private storage:Storage, public alertController: AlertController) {
 
     db.getCategories().subscribe(c => {this.categories = c});
     this.storage.get('categories').then(data => { this.storageData = data;})
@@ -54,6 +54,17 @@ export class TopicSelectPage implements OnInit {
 
   }
 
+
+  async presentModal(cat:Category) {
+    console.log("cat in topic-select",cat)
+    const modal = await this.modalController.create({
+      component: TopicModalComponent,
+      componentProps: {
+        "category": cat
+      }
+    });
+    return await modal.present();
+  }
 
   async deselectCategory( cat:Category) {
     const alert = await this.alertController.create({

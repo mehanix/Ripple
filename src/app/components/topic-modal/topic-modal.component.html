@@ -1,11 +1,30 @@
-<ion-content>
-    <img src="{{data.imagine}}" style="width:100%; object-fit: cover;">
+<ion-content style="height:100%">
+  <div class="img-section">
+      <img src="{{cat.img}}" style="width:100%; object-fit: cover;">
 
-    <h1>{{data.nume}}</h1>
-    <p>{{data.desc}}</p>
-    <ion-button color="secondary" (click)="changeTopicState()">{{text}}</ion-button>
+  </div>
 
-      <ion-button (click)="close()">Close</ion-button>
+  <div class="text-section">
+
+      <h1 align="center">{{cat.name}}</h1>
+      <p>{{cat.desc}}</p>
+
+  </div>
+
+  <div class="button-section">
+      <ion-grid style="height: 100%">
+          <ion-row justify-content-center align-items-center style="height: 100%">
+            <ion-col>
+                  <ion-button color="secondary" (click)="changeTopicState()">Text</ion-button>
+                  <ion-button (click)="close()">Close</ion-button>
+            </ion-col>
+            
+          </ion-row>
+    
+        </ion-grid>
+
+  </div>
+
 
       
 </ion-content>
