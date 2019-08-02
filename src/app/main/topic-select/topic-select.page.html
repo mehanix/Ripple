@@ -13,7 +13,7 @@
 
     <ion-item-sliding *ngFor="let item of categories" >
 
-      <ion-item  *ngIf="item.progress!==null">
+      <ion-item  (click)="presentModal(item)" *ngIf="item.progress!==null">
           <ion-thumbnail slot="start">
               <img src="{{item.img}}">
             </ion-thumbnail>
@@ -44,7 +44,7 @@
 
     <ion-item-sliding *ngFor="let item of categories">
 
-        <ion-item *ngIf="item.progress===null">
+        <ion-item (click)="presentModal(item)" *ngIf="item.progress===null">
             <ion-thumbnail slot="start">
                 <img src="{{item.img}}">
               </ion-thumbnail>
