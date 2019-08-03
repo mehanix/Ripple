@@ -13,7 +13,7 @@ INSERT OR IGNORE INTO 'categories' (id,name,img,descr,lesson_count, progress) VA
   'Geografie',
    "https://www.worldatlas.com/r/w728-h425-c728x425/upload/83/db/8f/geography.jpg",
   'Invata despre continente, relief si capitalele lumii!',
-  '4',
+  '6',
    null
 );
 INSERT OR IGNORE INTO 'categories' (id,name,img,descr,lesson_count,progress) VALUES (
@@ -21,7 +21,7 @@ INSERT OR IGNORE INTO 'categories' (id,name,img,descr,lesson_count,progress) VAL
   'Animale',
   "https://hrbc.org.uk/app/uploads/2013/06/JungleAnimalsBorder-600x270.jpg",
   'De la habitatele lor la particularitatile fiecarei specii, lumea animalelor ramane fascinanta. Aceste lectii te vor ajuta sa o intelegi mai bine.',
-  '5',
+  '6',
   null
 );
 INSERT OR IGNORE INTO 'categories' (id,name,img,descr,lesson_count,progress) VALUES (
@@ -29,7 +29,7 @@ INSERT OR IGNORE INTO 'categories' (id,name,img,descr,lesson_count,progress) VAL
   'Sistemul solar',
   "https://www.scienceabc.com/wp-content/uploads/2015/09/Solar-System.jpg",
   ' Exploreaza spatiul cu aceste lectii despre planete, sateliti, asteroizi si alte corpuri ceresti fascinante!',
-  '5',
+  '6',
   null
 );
 INSERT OR IGNORE INTO 'categories' (id,name,img,descr,lesson_count,progress) VALUES (
@@ -37,17 +37,10 @@ INSERT OR IGNORE INTO 'categories' (id,name,img,descr,lesson_count,progress) VAL
   'Istoria lumii',
   "https://gmw.ethz.ch/en/_jcr_content/fullwidthimageHome/image.imageformat.carousel.750402162.jpg",
   'Te-ai intrebat vreodata cum a ajuns omenirea in punctul in care este astazi? Daca da, lectiile despre Istoria lumii sunt pentru tine! Aceste lectii contin informatii despre evenimentele majore din istorie care au schimbat lumea.',
-  '5',
+  '6',
   null
 );
-INSERT OR IGNORE INTO 'categories' (id,name,img,descr,lesson_count,progress) VALUES (
-    5,
-  'Stiinta de zi cu zi',
-  "https://www.open.edu/openlearn/ocw/pluginfile.php/1139252/mod_resource/content/0/snhe_1_OLHP_786x400.jpg",
-  'Tot ce e in jurul nostru este, la baza, stiinta - intra in detalii cu acest set de lectii, ce prezinta intr-un mod usor de inteles evenimente din viata de zi cu zi.',
-  '5',
-  null
-);
+
 
 INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id,paragraphs,img,index_lesson,is_complete) VALUES (
   'Cele mai mari fluvii ale lumii',
@@ -125,6 +118,7 @@ INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id
   '4',
   '0'
 );
+
 
 
 
@@ -224,9 +218,9 @@ INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id
   'Cercetatorii au incercat sa descopere planete cu conditii asemanatoare ca ale Pamantului, conditii care permit viata. Afla astazi in ce constau cautarile lor.',
   'http://www.astronomy.com/-/media/Images/Magazine%20Articles/2018/08/EX1.png?mw=600',
   '3',
-  '["Zona locuibilă este un câmp teoretic aproape de o stea în care toate planetele prezente au apă lichidă pe suprafața lor. Apa lichidă este considerată ca cel mai important element pentru viață, în mare parte din cauza rolului de solvent pe care îl joacă pe Pământ. Pentru o planetă, ca să aibă apă lichidă la suprafață, distanța de la soare trebuie să îi permită să aibă o temperatură cuprinsă între 0 și 100 °C și să aibă o masă suficientă pentru a reține o atmosferă și apa. Această zonă locuibilă depinde de tipul de stea (cu cat o stea este mai fierbinte, cu atat zona locuibila se indeparteaza), iar cum multe stele devin mai strălucitoare, cu vârsta, ele imping tot mai mult zona locuibila in afara.",
-    "În prezent avem un singur exemplu de locuibilitate planetară, Pământul nostru, deci o planetă unde există viață, aproape de marginea interioară a zonei sale locuibile în jurul unei stele de tip G (galben). În ciuda tuturor propriei noastre planete, în timpul milioanelor de ani de schimbări geologice și atmosferice, el a avut perioade în care a fost mai favorabil sau mai puțin favorabil vieții. Dimensiunea continentele, oceanele, elementele din atmosfera de lucru pot varia locuit ale unei planete și forma ființelor vii pe care-l populează. Există speculații că planete sau esolune cu oceane puțin adânci au o biodiversitate mai mult decât marine planete cu oceane foarte adânci; Planete cu continente mici și numeroase pot fi mai locuibile și umed, în timp ce planete foarte mari continente, ar avea deserturi imense inospitalier în zonele interioare.",
-    "Planete sau esolune puțin mai cald Pământul ar avea zone vaste tropicale foarte favorabile pentru viață și biodiversitate, dar aceleași planete pot avea oceane prea fierbinți și săracii de oxigen. Mai mult decât atât, aceste planete, creșteri bruște de temperatură, de asemenea, discret, ar putea duce la numeroase extincții în masă peste milioane de ani. Planete cu o mulțime de oxigen în schimb ar crește dimensiunea organismelor, și s-ar putea prospera ființe gigantice. Planete cu o greutate ridicată ar putea găzdui forme de viață, mai degrabă pisate, masive si indesate. Planete cu gravitate redusă ar fi forme de viață mai lung și subțire",
+  '["Zona locuibilă este o teorie conform careia exista un câmp teoretic aproape de fiecare stea în care toate planetele prezente au apă lichidă pe suprafața lor. Apa lichidă este considerată cel mai important element pentru viață, în mare parte din cauza rolului de solvent pe care îl joacă pe Pământ. Pentru ca o planetă să aibă apă lichidă la suprafață, distanța de la soare trebuie să îi permită să aibă o temperatură cuprinsă între 0 și 100 °C și să aibă o masă suficientă pentru a reține o atmosferă și apa. Această zonă locuibilă depinde de tipul de stea (cu cat o stea este mai fierbinte, cu atat zona locuibila se indeparteaza), iar cum multe stele devin mai strălucitoare cu vârsta, ele imping tot mai mult zona locuibila in afara.",
+    "În prezent avem un singur exemplu de locuibilitate planetară, Pământul nostru, deci o planetă unde există viață, aproape de marginea interioară a zonei sale locuibile în jurul unei stele de tip G (galben). În ciuda t=pozitiei propriei noastre planete, în timpul milioanelor de ani de schimbări geologice și atmosferice, planeta a avut perioade în care a fost mai favorabila sau mai puțin favorabila vieții. Dimensiunea continentelor, oceanelor, elementelor din atmosfera de lucru pot varia locuibilitatea unei planete și forma ființelor vii pe care o  populează. Există speculații că planetele sau esolunele cu oceanele puțin adânci au o biodiversitate mai mare decât planetele marine cu oceane foarte adânci; Planete cu continente mici și numeroase pot fi mai locuibile și mai umede, în timp ce planete foarte mari cu continente, ar avea deserturi imense inospitaliere în zonele interioare.",
+    "Planetele sau esolunele puțin mai calde decat Pământul ar avea zone vaste tropicale foarte favorabile pentru viață și biodiversitate, dar aceleași planete pot avea oceane prea fierbinți și lipsa de oxigen. Mai mult decât atât, aceste planete pot avea creșteri bruște de temperatură, si ar putea duce la numeroase extincții în masă peste milioane de ani. Planete cu mult oxigen, în schimb, ar putea crește dimensiunea organismelor, și ar putea aparea ființe gigantice. Planetele cu o greutate ridicată ar putea găzdui forme de viață, mai degrabă plate, masive si indesate. Planete cu gravitate redusă ar putea gazdui forme de viață mai lungi și subțiri.",
     "Afla mai multe aici: http://www.mondialieni.altervista.org/"]',
   '["https://upload.wikimedia.org/wikipedia/commons/6/61/Habitable_zone_-_HZ.png","",""]',
   '3',
@@ -359,7 +353,7 @@ INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id
   'Babylon si codul lui Hammurabi',
   'Codul lui Hammurabi a fost primul set de reguli, legi, care includea prezumptia de nevinovatie pana la proba contrarie. Afla mai multe despre acesta, si despre civilizatia babiloniana, astazi!',
   'https://www.realmofhistory.com/wp-content/uploads/2019/03/babylon-history-reconstruction_1-min-770x437.jpg',
-  '1',
+  '4',
   '["Pe malul Eufratului îşi poartă istoria pe umeri unul dintre cele mai frumoase şi faimoase oraşe ale lumii antice:Babilonul. Centru al artei şi culturii, oraş protejat de Alexandru cel Mare, Babilonul era denumit în Scripturi Stăpâna Regatelor. Babilonul, unul dintre cele mai faimoase oraşe ale civilizaţiei antice, a fost capitala Babiloniei, localizată în sudul Mesopotamiei, ceea ce înseamă astăzi 60 de mile distanţă de Baghdad, Irak.",
     "Se ştiu foarte puţine lucruri despre originea Babilonului, dar cronicile antice sugerează că oraşul datează de acum 4000 de ani, şi era considerat un centru administrativ. Apoi, în 1894 î.Hr. oraşul a fost cucerit de către Samuabun, un lider local din ţinutul a ceea ce numim astăzi Siria, şi l-a transformat într-un mic regat. Soarta oraşului s-a schimbat radical odată cu venirea pe tron a celui de-al VI-lea rege, Hammurabi, în 1792 î.Hr.",
     "În timpul domniei sale, 1792-1750 î.Hr., Hammurabi şi-a extins teritoriul de-a lungul Eufratului, anexând mai multe vechi centre urbane, precum Ur, Uruk, Isin şi Larsa. Conducător al unui înfloritor imperiu, Hammurabi era văzut ca un zeu, şi astfel a înfiinţat noi reguli pentru poporul său. Codul lui Hammurabi, care datează din 1754 î.Hr. conţinea 282 de legi. Gravat pe o bucată de 4 tone de piatră, care acum este expusă la Muzeul Luvru din Paris, codul prezenta numeroase pedepse aspre în cazul în care legile sunt încălcate, pedepse care includeau tăierea anumitor părţi ale corpului precum limba, mâinile, sânii sau urechile. Codul lui Hammurabi este considerat ca fiind primul exemplu al prezumţiei de nevinovăţie până la proba contrarie. Justiţia era determinată de cele trei clase sociale ale Babilonului:oamenii cu proprietăţi, cei liberi şi sclavii. De exemplu, dacă un doctor omora un pacient bogat, drept pedeapsă i se tăiau mâinile, dar dacă pacientul era un sclav, o compensaţie financiară era suficientă.",
@@ -370,3 +364,76 @@ INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id
   '5',
   '0'
 );
+
+
+
+INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id,paragraphs,img,index_lesson,is_complete) VALUES (
+  'Testeaza-ti cunostinele: Istorie',
+  'E timpul sa iti dai seama ce ai invatat cu acest chestionar scurt!',
+  'https://blog.my.com/wp-content/uploads/2016/11/Depositphotos_22942194_m-2015.jpg',
+  '4',
+  '["1. Prin ce inoveaza codul lui Hammurabi?",
+    "a. Adauga prezumptia de vinovatie",
+    "b. Adauga primul cod de negot",
+    "c. Nu include sclavia",
+    "2. Ce drog a cauzat razboaiele intre China si Anglia?",
+    "a. Cocaina",
+    "b. Heroina",
+    "c. Opiu",
+    "3. Care este vechiul nume al orasului Istanbul?",
+    "a. Babylon",
+    "b. Istanbul",
+    "c. Ankara",
+    "Raspusuri:1.c,2.c,3.b"]',
+  '["https://blog.my.com/wp-content/uploads/2016/11/Depositphotos_22942194_m-2015.jpg","",""]',
+  '6',
+  '0'
+);
+
+INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id,paragraphs,img,index_lesson,is_complete) VALUES (
+  'Testeaza-ti cunostintele: Animalele',
+  'E timpul sa iti dai seama ce ai invatat cu acest chestionar scurt!',
+  'https://hrbc.org.uk/app/uploads/2013/06/JungleAnimalsBorder-600x270.jpg',
+  '2',
+  '["1. Cum se numeste procedeul prin care insectele se transforma drastic?",
+    "a. Transfigurare",
+    "b. Metamorfoza",
+    "c. Modificare",
+    "2. Care este o caracteristica de baza a reptilelor?",
+     "a. Solzii",
+     "b. Carapace",
+     "c. Sange cald",
+     "3. Care sunt categoriile in care se impart pestii dupa structura scheletului?",
+      "a. Mari si mici",
+      "b. Pielosi",
+      "c. Cartilaginosi si ososi",
+      "",
+      "Raspunsuri: 1.b , 2.a, 3.c"
+    ]',
+  '[ "https://hrbc.org.uk/app/uploads/2013/06/JungleAnimalsBorder-600x270.jpg","",""]',
+  '6',
+  '0'
+);
+
+
+INSERT OR IGNORE INTO 'lessons' (header_title,header_desc,header_img,category_id,paragraphs,img,index_lesson,is_complete) VALUES (
+  'Testeaza-ti cunostintele: Geografie',
+  'E timpul sa iti dai seama ce ai invatat cu acest chestionar scurt!',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMuBiNFknacbszijUCAZuRqRqsOnv6swq31Nft64E03Iv1B7QU',
+  '1',
+  '["1. Care fluviu este cel mai lung din lume?",
+    "a. Dunarea",
+     "b.Nil",
+    "c.Amazon",
+    "2.Care doua continente nu sunt despartite de apa?",
+    "a.Europa si Africa"," b. America de Nord si America de Sud","c. Europa si Asia",
+    "3.Care este gazul a carui reducere de emisie ar incetini incalzirea globala?",
+    "a.H2","b.CO2","c.Hg",
+    "",
+    "Raspunsuri: 1.b, 2.c, 3.b"]',
+  '["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMuBiNFknacbszijUCAZuRqRqsOnv6swq31Nft64E03Iv1B7QU","",""]',
+  '6',
+  '0'
+
+);
+
