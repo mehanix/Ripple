@@ -1,38 +1,43 @@
 <ion-content>
-  <ion-row class="logo justify-content-center align-items-center" align="center" style="height:27%">
-    <ion-col no-padding no-margin>
-      <h1>Bine ai revenit!</h1>
-      <p style="margin-bottom:0!important">Iată lecția ta pentru ziua de azi:</p>
-
-    </ion-col>
-  </ion-row>
-  
-  <ion-row class="lessons-container justify-content-center align-items-center"  align="center">
-      
-    <ion-card style="width:100%; margin-top:0;"  color="light" no-padding>
-          <img src="{{(lesson)?.headerImage}}" style=" height:50%; width:100%; object-fit: cover;">
+    <ion-row class="logo justify-content-center align-items-center" align="center" style="height:27%">
+        <ion-col no-padding no-margin>
+          <h1>Salut!</h1>
+          <p style="margin-bottom:0!important">Iată lecția ta pentru ziua de azi:</p>
     
-          <div class="text-container">
-           
-            <ion-card-title >{{(lesson)?.headerTitle}}</ion-card-title>
-    
-          <ion-card-content>
-            {{(lesson)?.headerDesc}}
-          </ion-card-content>
-        </div>
-         
-        </ion-card>
-  </ion-row>  
-
-  <ion-row style="height:13vh!important;"class="justify-content-center align-items-center"  align="center">
-
-      <ion-col class="ion-align-self-center">
-          <ion-button type="button" (click)="startLesson()" routerLink="/lesson-view/lesson" >{{ (lesson)?.isComplete == false ? 'Începe lecția!' : 'Recitește lecția' }}</ion-button>
-
         </ion-col>
+      </ion-row>
 
-  </ion-row>
+  <div *ngIf="lesson!==null">
 
+    
+      
+        
+        <ion-row class="lessons-container justify-content-center align-items-center"  align="center">
+            
+          <ion-card style="width:100%; margin-top:0;"  color="light" no-padding>
+                <img src="{{(lesson)?.headerImage}}" style=" height:50%; width:100%; object-fit: cover;">
+          
+                <div class="text-container">
+                 
+                  <ion-card-title >{{(lesson)?.headerTitle}}</ion-card-title>
+          
+                <ion-card-content>
+                  {{(lesson)?.headerDesc}}
+                </ion-card-content>
+              </div>
+               
+              </ion-card>
+        </ion-row>  
+      
+        <ion-row style="height:13vh!important;"class="justify-content-center align-items-center"  align="center">
+      
+            <ion-col class="ion-align-self-center">
+                <ion-button type="button" (click)="startLesson()" routerLink="/lesson-view/lesson" >{{ (lesson)?.isComplete == false ? 'Începe lecția!' : 'Recitește lecția' }}</ion-button>
+      
+              </ion-col>
+      
+        </ion-row>
+  </div>
 
   </ion-content>
 
