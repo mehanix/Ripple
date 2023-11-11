@@ -40,3 +40,4 @@
 <div align="center">
   <video src="https://github.com/mehanix/Ripple/assets/23579982/b376a6ba-1bd2-4e09-a58d-28c48d224464" width="400" />
 </div>
+<p>This project was last updated in 2019 but the video is recent (2023). Unfortunately I used hyperlinks for the image resources back then and some of the image links are broken now. Lesson learned :) Project <a href="https://github.com/mehanix/Ripple/releases">still works though</a>, give it a try! 🎉 </p> 
