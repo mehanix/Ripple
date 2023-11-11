@@ -15,7 +15,7 @@
      </tr>
           <tr>
       <td><img src="https://i.imgur.com/gHdR8z3.jpg/"></td>
-      <td><br><br> 🌟 Features: <br><br>
+      <td><br> 🌟 Features: <br><br>
        📚 Select one or multiple topics to learn about<br>
        🕒 Choose when to be notified<br>
        📅 Return to the app every day to progress through the content!<br>
