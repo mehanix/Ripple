@@ -25,31 +25,17 @@
       </td>
      </tr>
           <tr>
-      <td></td>
-      <td></td>
+      <td>🛠️ Technologies used: <br><br>
+      <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
+          <img src="https://img.shields.io/badge/Ionic-%233880FF.svg?style=for-the-badge&logo=Ionic&logoColor=white"/>
+          <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"/>
+          <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white"/>
+          <img src="https://img.shields.io/badge/cordova-apache?style=for-the-badge&labelColor=%234cc2e4&color=%234cc2e4"/>
+      </td>
+      <td><img src="https://i.imgur.com/sK0bcDZ.jpg"/></td>
      </tr>
     </table>
     </div>
-
-
-<br><br><br><br>
-
 <div align="center">
   <video src="https://github.com/mehanix/Ripple/assets/23579982/b376a6ba-1bd2-4e09-a58d-28c48d224464" width="400" />
 </div>
-
-<h1 align="center">Bite-sized lessons</h1>
-
-![a](https://i.imgur.com/gHdR8z3.jpg)
-
-<p> Receive daily new facts about the things you love! Save and share your favorite facts to your friends, and track your progress.</p>
-
-
-
-<br><br><br><br>
-
-![a](https://i.imgur.com/sK0bcDZ.jpg)
-
-<p> Available both online and offline, to accomodate your journey through gaining knowledge. Start using Ripple now!</p>
-
-
