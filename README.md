@@ -10,7 +10,7 @@
       <td></td>
      </tr> -->
      <tr>
-       <td>Ripple is cross-platform mobile app that aims to help you get into the habit of learning new things every day.</td>
+       <td>Ripple is a cross-platform mobile app that aims to help you get into the habit of learning new things every day.</td>
         <td> <a href="https://app.daily.dev/sunil-9"><img src="https://i.imgur.com/lZgl4aM.jpg"/></a></td>
      </tr>
           <tr>
